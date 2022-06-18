@@ -4,7 +4,7 @@ namespace App\Models;
 
 use CodeIgniter\Model;
 
-class ModelAuth extends Model
+class ModelRegistrant extends Model
 {
     protected $table      = 'registrant';
     protected $primaryKey = 'id';

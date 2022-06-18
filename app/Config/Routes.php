@@ -41,6 +41,8 @@ $routes->add('/auth/(:any)', 'Auth::$1');
 
 $routes->group('', ['filter'=>'VerifyAuth'], function ($routes) {
     $routes->add('/dashboard', 'Admin::index');
+    $routes->add('/event', 'Admin::event');
+    $routes->add('/event/(:any)', 'Admin::$1');
 });
 
 $routes->get('/', 'Home::index');
