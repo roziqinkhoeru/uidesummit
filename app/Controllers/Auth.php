@@ -6,12 +6,18 @@ class Auth extends BaseController
 {
     public function login()
     {
-        return view('welcome_message');
+        $data = [
+            'title' => 'Login Uidesummit 2022',
+        ];
+        return view('auth/login', $data);
     }
 
 
     public function register()
     {
-        return view('welcome_message');
+        $data = [
+            'title' => 'Login Uidesummit 2022',
+        ];
+        return view('auth/register', $data);
     }
 }
