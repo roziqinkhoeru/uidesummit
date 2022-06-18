@@ -46,7 +46,7 @@
                                 <a
                                     href="/event/deleteEvent/<?= $event['id_event']; ?>"><i
                                         class="fa-solid fa-trash"></i></a>
-                                <a href=""><i class="fa-solid fa-eye"></i></a>
+                                <a href="/event/viewRegistrantEvent/<?= $event['id_event']; ?>"><i class="fa-solid fa-eye"></i></a>
                             </td>
                         </tr>
                         <?php endforeach; ?>

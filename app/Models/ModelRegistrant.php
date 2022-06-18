@@ -11,5 +11,5 @@ class ModelRegistrant extends Model
 
     protected $useAutoIncrement = true;
 
-    protected $allowedFields = ['id', 'name_registrant','email_registrant','date_brith__registrant','address_registrant','id_event'];
+    protected $allowedFields = ['id', 'name_registrant','email_registrant','date_birth_registrant','address_registrant','id_event'];
 }

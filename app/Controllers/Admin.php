@@ -3,14 +3,17 @@
 namespace App\Controllers;
 
 use App\Models\ModelEvent;
+use App\Models\ModelRegistrant;
 
 class Admin extends BaseController
 {
     protected $modelEvent;
+    protected $modelRegistrant;
 
     public function __construct()
     {
         $this->modelEvent = new ModelEvent();
+        $this->modelRegistrant = new ModelRegistrant();
     }
 
     // index
@@ -121,5 +124,22 @@ class Admin extends BaseController
             session()->setFlashdata('error', 'Data gagal dihapus');
         }
         return redirect()->to('/event');
+    }
+
+    // view registrant event
+    public function viewRegistrantEvent($id_event)
+    {
+        $event = $this->modelEvent->find($id_event);
+        $listRegistrant = $this->modelRegistrant->where('id_event', $id_event)->findAll();
+
+        $data=[
+            'title'=>'Registrant Event | Uidesummit 2022',
+            'css'=>'',
+            'tab'=>'event',
+            'event'=> $event,
+            'listRegistrant'=> $listRegistrant,
+        ];
+        
+        return view('admin/viewRegistrantEvent', $data);
     }
 }
