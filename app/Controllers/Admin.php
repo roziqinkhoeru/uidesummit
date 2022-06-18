@@ -110,4 +110,16 @@ class Admin extends BaseController
         }
         return redirect()->to('/event');
     }
+
+    // delete event
+    public function deleteEvent($id)
+    {
+        $query = $this->modelEvent->delete($id);
+        if ($query) {
+            session()->setFlashdata('success', 'Data berhasil dihapus');
+        } else {
+            session()->setFlashdata('error', 'Data gagal dihapus');
+        }
+        return redirect()->to('/event');
+    }
 }
