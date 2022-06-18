@@ -88,4 +88,26 @@ class Admin extends BaseController
         
         return view('admin/editEvent', $data);
     }
+
+    // save edit event
+    public function saveEditEvent($id_event)
+    {
+        $name_event = $this->request->getPost('nameEvent');
+        $date_event = $this->request->getPost('dateEvent');
+        $information_event = $this->request->getPost('informationEvent');
+
+        $event = [
+            'name_event' => $name_event,
+            'date_event' => $date_event,
+            'information_event' => $information_event,
+        ];
+
+        $query = $this->modelEvent->update($id_event, $event);
+        if ($query) {
+            session()->setFlashdata('success', 'Data berhasil diubah');
+        } else {
+            session()->setFlashdata('error', 'Data gagal diubah');
+        }
+        return redirect()->to('/event');
+    }
 }
