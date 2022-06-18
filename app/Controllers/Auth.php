@@ -11,13 +11,4 @@ class Auth extends BaseController
         ];
         return view('auth/login', $data);
     }
-
-
-    public function register()
-    {
-        $data = [
-            'title' => 'Login Uidesummit 2022',
-        ];
-        return view('auth/register', $data);
-    }
 }
