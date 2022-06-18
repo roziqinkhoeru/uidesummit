@@ -45,7 +45,8 @@ $routes->group('', ['filter'=>'VerifyAuth'], function ($routes) {
     $routes->add('/event/(:any)', 'Admin::$1');
 });
 
-$routes->get('/', 'Home::index');
+$routes->get('/', 'Event::index');
+$routes->add('/saveRegister/(:any)', 'Event::saveRegister/$1');
 
 /*
  * --------------------------------------------------------------------
