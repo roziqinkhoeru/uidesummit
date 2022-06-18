@@ -13,10 +13,11 @@ class Admin extends BaseController
         $this->modelEvent = new ModelEvent();
     }
 
+    // index
     public function index()
     {
         $data=[
-            'title'=>'Dashboard Admin Uidesummit 2022',
+            'title'=>'Dashboard Admin | Uidesummit 2022',
             'css'=>'',
             'tab'=>'dashboard'
         ];
@@ -24,12 +25,13 @@ class Admin extends BaseController
         return view('admin/index', $data);
     }
 
+    // event
     public function event()
     {
         $listEvent = $this->modelEvent->orderBy('date_event', 'ASC')->findAll();
 
         $data=[
-            'title'=>'Event Admin Uidesummit 2022',
+            'title'=>'Event | Uidesummit 2022',
             'css'=>'',
             'tab'=>'event',
             'listEvent'=> $listEvent,
@@ -38,14 +40,52 @@ class Admin extends BaseController
         return view('admin/event', $data);
     }
 
+    // add event
     public function addEvent()
     {
         $data=[
-            'title'=>'Add Event Admin Uidesummit 2022',
+            'title'=>'Add Event | Uidesummit 2022',
             'css'=>'',
             'tab'=>'event',
         ];
         
         return view('admin/addEvent', $data);
+    }
+
+    // save event
+    public function saveEvent()
+    {
+        $name_event = $this->request->getPost('nameEvent');
+        $date_event = $this->request->getPost('dateEvent');
+        $information_event = $this->request->getPost('informationEvent');
+
+        $event = [
+            'name_event' => $name_event,
+            'date_event' => $date_event,
+            'information_event' => $information_event,
+        ];
+
+        $query = $this->modelEvent->insert($event);
+        if ($query) {
+            session()->setFlashdata('success', 'Data berhasil ditambahkan');
+        } else {
+            session()->setFlashdata('error', 'Data gagal ditambahkan');
+        }
+        return redirect()->to('/event');
+    }
+
+    // edit event
+    public function editEvent($id)
+    {
+        $event = $this->modelEvent->find($id);
+
+        $data=[
+            'title'=>'Edit Event | Uidesummit 2022',
+            'css'=>'',
+            'tab'=>'event',
+            'event'=> $event,
+        ];
+        
+        return view('admin/editEvent', $data);
     }
 }

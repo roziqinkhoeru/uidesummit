@@ -15,7 +15,7 @@
             <h6 class="m-0 font-weight-bold text-primary">Form add event</h6>
         </div>
         <div class="card-body">
-            <form>
+            <form action="/event/saveEvent" method="post">
                 <!-- name event -->
                 <div class="row mb-3">
                     <label for="inputEmail" class="col-sm-2 col-form-label">Name event</label>
@@ -34,8 +34,8 @@
                 <div class="row mb-3">
                     <label for="inputInformation" class="col-sm-2 col-form-label">Information event</label>
                     <div class="col-sm-10">
-                        <textarea name="informationEvent" class="form-control"
-                            placeholder="input information event"></textarea>
+                        <textarea name="informationEvent" class="form-control" placeholder="input information event"
+                            rows="5"></textarea>
                     </div>
                 </div>
                 <button type="submit" class="btn btn-primary">Add event</button>
