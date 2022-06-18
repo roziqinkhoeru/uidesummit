@@ -1,17 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
+<?= $this->extend('layouts/templates'); ?>
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
+<?= $this->section('maincontent'); ?>
 
-<body>
-    <h1>INI INDEX</h1>
-    <a href="<?= base_url('auth/logout'); ?>">KELUAR
-        SEKARANG CEPAT</a>
-</body>
+<!-- Begin Page Content -->
+<div class="container-fluid">
+  <!-- Page Heading -->
+  <div class="d-sm-flex align-items-center justify-content-between mb-4">
+    <h1 class="h3 mb-0 text-gray-800">Dashboard</h1>
+    <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
+        class="fas fa-download fa-sm text-white-50"></i> Generate
+      Report</a>
+  </div>
+</div>
 
-</html>
+<?= $this->endSection();
