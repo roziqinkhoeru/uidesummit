@@ -17,13 +17,23 @@
 <body>
     <div class="container_mod">
         <div class="container">
-            <form action="" class="">
+            <?php
+            if (session()->getFlashdata('error')) {
+                echo '<div class="alert alert-danger">'.session()->getFlashdata('error').'</div>';
+            }
+             ?>
+
+            <form
+                action="<?= base_url('auth/checkAuth'); ?>"
+                method="post">
                 <div class="form-floating mb-3">
-                    <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                    <input type="email" class="form-control" id="floatingInput" name="email"
+                        placeholder="name@example.com">
                     <label for="floatingInput">Email address</label>
                 </div>
                 <div class="form-floating mb-4">
-                    <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+                    <input type="password" class="form-control" id="floatingPassword" name="password"
+                        placeholder="Password">
                     <label for="floatingPassword">Password</label>
                 </div>
                 <div class="mb-5">
