@@ -21,19 +21,19 @@
     <link href="<?= base_url('assets/css/' . $css . ''); ?>" rel="stylesheet" />
 </head>
 
-<body>
+<body id="uidesummit2022">
     <!-- Navigation-->
     <nav class="navbar navbar-expand-lg navbar-light fixed-top shadow-sm" id="mainNav">
         <div class="container px-5">
-            <a class="navbar-brand fw-bold" href="/">UIDESUMMIT 2022</a>
+            <a class="navbar-brand fw-bold" href="#uidesummit2022">UIDESUMMIT 2022</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                 Menu
                 <i class="bi-list"></i>
             </button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ms-auto me-4 my-3 my-lg-0">
-                    <li class="nav-item"><a class="nav-link me-lg-3" href="#features">Features</a></li>
-                    <li class="nav-item"><a class="nav-link me-lg-3" href="#download">Download</a></li>
+                    <li class="nav-item"><a class="nav-link me-lg-3" href="#join_event">Event</a></li>
+                    <li class="nav-item"><a class="nav-link me-lg-3" href="#sponsor">Sponsor</a></li>
                 </ul>
                 <button class="btn btn-primary rounded-pill px-3 mb-2 mb-lg-0" data-bs-toggle="modal" data-bs-target="#feedbackModal">
                     <span class="d-flex align-items-center">
@@ -117,8 +117,8 @@
             </div>
         </aside>
 
-        <!-- Basic features section-->
-        <section class="bg-light">
+        <!-- Join event -->
+        <section class="bg-light" id="join_event">
             <div class="container px-5">
                 <div class="row gx-5 align-items-center justify-content-center justify-content-lg-between">
                     <?php foreach ($listEvent as $event) : ?>
@@ -152,13 +152,13 @@
                         <br />
                         Start building.
                     </h2>
-                    <a class="btn btn-outline-light py-3 px-4 rounded-pill" href="https://startbootstrap.com/theme/new-age" target="_blank">Download for free</a>
+                    <a class="btn btn-outline-light py-3 px-4 rounded-pill" href="#join_event" target="_blank">GET FULL EVENTS</a>
                 </div>
             </div>
         </section>
 
         <!-- Sponsors -->
-        <section class="bg-gradient-primary-to-secondary" id="download">
+        <section class="bg-gradient-primary-to-secondary" id="sponsor">
             <div class="container px-5">
                 <h4 class="text-center text-white font-alt mb-5">Sponsors</h4>
                 <p class="fw-normal text-center text-white mb-1">Would like to join the community and improve your tech brand?</p>
