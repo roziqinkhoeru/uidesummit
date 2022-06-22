@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Controllers;
 
 use App\Models\ModelEvent;
@@ -19,9 +20,10 @@ class Event extends BaseController
     {
         $listEvent = $this->modelEvent->orderBy('date_event', 'ASC')->findAll();
 
-        $data =[
-            'title'=>'Uidesummit 2022',
-            'listEvent'=> $listEvent,
+        $data = [
+            'title' => 'Uidesummit 2022',
+            'listEvent' => $listEvent,
+            'css' => 'styles.css',
 
         ];
         return view('user/index', $data);
@@ -36,11 +38,11 @@ class Event extends BaseController
         $address = $this->request->getPost('address');
 
         $registrant = [
-            'name_registrant'=>$fullname,
-            'email_registrant'=>$email,
-            'date_birth_registrant'=>$date_birth,
-            'address_registrant'=>$address,
-            'id_event'=> $id_event,
+            'name_registrant' => $fullname,
+            'email_registrant' => $email,
+            'date_birth_registrant' => $date_birth,
+            'address_registrant' => $address,
+            'id_event' => $id_event,
         ];
         $this->modelRegistrant->save($registrant);
 
