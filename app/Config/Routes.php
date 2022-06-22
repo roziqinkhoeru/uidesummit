@@ -39,13 +39,16 @@ $routes->get('/login', 'Auth::login');
 $routes->get('/logout', 'Auth::logout');
 $routes->add('/auth/(:any)', 'Auth::$1');
 
-$routes->group('', ['filter'=>'VerifyAuth'], function ($routes) {
+$routes->group('', ['filter' => 'VerifyAuth'], function ($routes) {
     $routes->add('/dashboard', 'Admin::index');
     $routes->add('/event', 'Admin::event');
     $routes->add('/event/(:any)', 'Admin::$1');
 });
 
 $routes->get('/', 'Event::index');
+$routes->get('/privacy', 'Event::privacy');
+$routes->get('/terms', 'Event::terms');
+$routes->get('/faq', 'Event::faq');
 $routes->add('/saveRegister/(:any)', 'Event::saveRegister/$1');
 
 /*

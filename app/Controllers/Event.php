@@ -16,6 +16,7 @@ class Event extends BaseController
         $this->modelRegistrant = new ModelRegistrant();
     }
 
+    // view index
     public function index()
     {
         $listEvent = $this->modelEvent->orderBy('date_event', 'ASC')->findAll();
@@ -47,5 +48,35 @@ class Event extends BaseController
         $this->modelRegistrant->save($registrant);
 
         return redirect()->to(base_url('/'));
+    }
+
+    // view privacy
+    public function privacy()
+    {
+        $data = [
+            'title' => 'Privacy Policy',
+            'css' => 'styles.css',
+        ];
+        return view('user/privacy', $data);
+    }
+
+    // view terms
+    public function terms()
+    {
+        $data = [
+            'title' => 'Terms & Conditions',
+            'css' => 'styles.css',
+        ];
+        return view('user/terms', $data);
+    }
+
+    // view faq
+    public function faq()
+    {
+        $data = [
+            'title' => 'FAQ',
+            'css' => 'styles.css',
+        ];
+        return view('user/faq', $data);
     }
 }
