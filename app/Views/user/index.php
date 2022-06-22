@@ -143,47 +143,6 @@
             </div>
         </section>
 
-        <?php foreach ($listEvent as $event) : ?>
-            <div class="modal fade" id="event_<?= $event['id_event']; ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">Register </h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <form action="/saveRegister/<?= $event['id_event']; ?>" method="post">
-                            <div class="modal-body">
-                                <!-- name -->
-                                <div class="mb-3">
-                                    <label for="fullname" class="form-label">Fullname</label>
-                                    <input type="text" class="form-control" name="fullname">
-                                </div>
-                                <!-- date birth -->
-                                <div class="mb-3">
-                                    <label for="date_birth" class="form-label">Date of birth</label>
-                                    <input type="date" class="form-control" name="date_birth">
-                                </div>
-                                <!-- email -->
-                                <div class="mb-3">
-                                    <label for="email" class="form-label">Email</label>
-                                    <input type="email" class="form-control" name="email">
-                                </div>
-                                <!-- address -->
-                                <div class="mb-3">
-                                    <label for="address" class="form-label">Address</label>
-                                    <input type="text" class="form-control" name="address">
-                                </div>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="submit" class="btn btn-primary">Register</button>
-                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        <?php endforeach; ?>
-
         <!-- Call to action section-->
         <section class="cta">
             <div class="cta-content">
@@ -198,10 +157,14 @@
             </div>
         </section>
 
-        <!-- App badge section-->
+        <!-- Sponsors -->
         <section class="bg-gradient-primary-to-secondary" id="download">
             <div class="container px-5">
-                <h2 class="text-center text-white font-alt mb-4">Get the app now!</h2>
+                <h4 class="text-center text-white font-alt mb-5">Sponsors</h4>
+                <p class="fw-normal text-center text-white mb-1">Would like to join the community and improve your tech brand?</p>
+                <div class="text-center mb-5">
+                    <a href="mailto:info@uidesummit.com" class="link_event">@info@uidesummit.com</a>
+                </div>
                 <div class="d-flex flex-column flex-lg-row align-items-center justify-content-center">
                     <a class="me-lg-3 mb-4 mb-lg-0" href="#!"><img class="app-badge" src="assets/img/google-play-badge.svg" alt="..." /></a>
                     <a href="#!"><img class="app-badge" src="assets/img/app-store-badge.svg" alt="..." /></a>
@@ -293,6 +256,47 @@
             </div>
         </div>
     </div>
+    <!-- Join event modal -->
+    <?php foreach ($listEvent as $event) : ?>
+        <div class="modal fade" id="event_<?= $event['id_event']; ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Register </h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <form action="/saveRegister/<?= $event['id_event']; ?>" method="post">
+                        <div class="modal-body">
+                            <!-- name -->
+                            <div class="mb-3">
+                                <label for="fullname" class="form-label">Fullname</label>
+                                <input type="text" class="form-control" name="fullname">
+                            </div>
+                            <!-- date birth -->
+                            <div class="mb-3">
+                                <label for="date_birth" class="form-label">Date of birth</label>
+                                <input type="date" class="form-control" name="date_birth">
+                            </div>
+                            <!-- email -->
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Email</label>
+                                <input type="email" class="form-control" name="email">
+                            </div>
+                            <!-- address -->
+                            <div class="mb-3">
+                                <label for="address" class="form-label">Address</label>
+                                <input type="text" class="form-control" name="address">
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="submit" class="btn btn-primary">Register</button>
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    <?php endforeach; ?>
     <!-- Bootstrap core JS-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Core theme JS-->
