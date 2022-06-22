@@ -98,109 +98,118 @@
         </div>
     </header>
 
-    <!-- Basic features section-->
-    <section class="bg-light">
-        <div class="container px-5">
-            <div class="row gx-5 align-items-center justify-content-center justify-content-lg-between">
-                <?php foreach ($listEvent as $event) : ?>
-                    <div class="col-4">
-                        <div class="card" style="width: 100%;">
-                            <div class="card-body">
-                                <h5 class="card-title"><?= $event['name_event']; ?>
-                                </h5>
-                                <h6 class="card-subtitle mb-2 text-muted"><?= $event['information_event']; ?>
-                                </h6>
-                                <p class="card-text"><?= $event['date_event']; ?>
-                                </p>
-                                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#event_<?= $event['id_event']; ?>">
-                                    Register now!
-                                </button>
-
-                            </div>
-                        </div>
-                    </div>
-                <?php endforeach; ?>
+    <!-- main -->
+    <main>
+        <!-- The event -->
+        <aside class="text-center bg-gradient-primary-to-secondary">
+            <div class="d-flex w-100 justify-content-center">
+                <p class="fw-bold mb-5 badge_event">The Event</p>
             </div>
-        </div>
-    </section>
-
-    <?php foreach ($listEvent as $event) : ?>
-        <div class="modal fade" id="event_<?= $event['id_event']; ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Register </h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <form action="/saveRegister/<?= $event['id_event']; ?>" method="post">
-                        <div class="modal-body">
-                            <!-- name -->
-                            <div class="mb-3">
-                                <label for="fullname" class="form-label">Fullname</label>
-                                <input type="text" class="form-control" name="fullname">
-                            </div>
-                            <!-- date birth -->
-                            <div class="mb-3">
-                                <label for="date_birth" class="form-label">Date of birth</label>
-                                <input type="date" class="form-control" name="date_birth">
-                            </div>
-                            <!-- email -->
-                            <div class="mb-3">
-                                <label for="email" class="form-label">Email</label>
-                                <input type="email" class="form-control" name="email">
-                            </div>
-                            <!-- address -->
-                            <div class="mb-3">
-                                <label for="address" class="form-label">Address</label>
-                                <input type="text" class="form-control" name="address">
-                            </div>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="submit" class="btn btn-primary">Register</button>
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    <?php endforeach; ?>
-
-    <!-- Quote/testimonial aside-->
-    <aside class="text-center bg-gradient-primary-to-secondary">
-        <div class="container px-5">
-            <div class="row gx-5 justify-content-center">
-                <div class="col-xl-8">
-                    <div class="h2 fs-1 text-white mb-4">"An intuitive solution to a common problem that we all face,
-                        wrapped up in a single app!"</div>
-                    <img src="assets/img/tnw-logo.svg" alt="..." style="height: 3rem" />
-                </div>
-            </div>
-        </div>
-    </aside>
-
-    <!-- Call to action section-->
-    <section class="cta">
-        <div class="cta-content">
+            <p class="lead fw-normal text-white mb-3">Uidesummit is a celebration of good things coming together:</p>
             <div class="container px-5">
-                <h2 class="text-white display-1 lh-1 mb-4">
-                    Stop waiting.
-                    <br />
-                    Start building.
-                </h2>
-                <a class="btn btn-outline-light py-3 px-4 rounded-pill" href="https://startbootstrap.com/theme/new-age" target="_blank">Download for free</a>
+                <div class="row gx-5 justify-content-center">
+                    <div class="col-xl-8">
+                        <div class="h2 fs-1 text-white mb-4">An intuitive solution to a common problem that we all face,
+                            wrapped up in a single app!</div>
+                        <a href="/" class="link_event">@UIDESUMMIT 2022</a>
+                    </div>
+                </div>
             </div>
-        </div>
-    </section>
-    <!-- App badge section-->
-    <section class="bg-gradient-primary-to-secondary" id="download">
-        <div class="container px-5">
-            <h2 class="text-center text-white font-alt mb-4">Get the app now!</h2>
-            <div class="d-flex flex-column flex-lg-row align-items-center justify-content-center">
-                <a class="me-lg-3 mb-4 mb-lg-0" href="#!"><img class="app-badge" src="assets/img/google-play-badge.svg" alt="..." /></a>
-                <a href="#!"><img class="app-badge" src="assets/img/app-store-badge.svg" alt="..." /></a>
+        </aside>
+
+        <!-- Basic features section-->
+        <section class="bg-light">
+            <div class="container px-5">
+                <div class="row gx-5 align-items-center justify-content-center justify-content-lg-between">
+                    <?php foreach ($listEvent as $event) : ?>
+                        <div class="col-4">
+                            <div class="card" style="width: 100%;">
+                                <div class="card-body">
+                                    <h5 class="card-title"><?= $event['name_event']; ?>
+                                    </h5>
+                                    <h6 class="card-subtitle mb-2 text-muted"><?= $event['information_event']; ?>
+                                    </h6>
+                                    <p class="card-text"><?= $event['date_event']; ?>
+                                    </p>
+                                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#event_<?= $event['id_event']; ?>">
+                                        Register now!
+                                    </button>
+
+                                </div>
+                            </div>
+                        </div>
+                    <?php endforeach; ?>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
+
+        <?php foreach ($listEvent as $event) : ?>
+            <div class="modal fade" id="event_<?= $event['id_event']; ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Register </h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <form action="/saveRegister/<?= $event['id_event']; ?>" method="post">
+                            <div class="modal-body">
+                                <!-- name -->
+                                <div class="mb-3">
+                                    <label for="fullname" class="form-label">Fullname</label>
+                                    <input type="text" class="form-control" name="fullname">
+                                </div>
+                                <!-- date birth -->
+                                <div class="mb-3">
+                                    <label for="date_birth" class="form-label">Date of birth</label>
+                                    <input type="date" class="form-control" name="date_birth">
+                                </div>
+                                <!-- email -->
+                                <div class="mb-3">
+                                    <label for="email" class="form-label">Email</label>
+                                    <input type="email" class="form-control" name="email">
+                                </div>
+                                <!-- address -->
+                                <div class="mb-3">
+                                    <label for="address" class="form-label">Address</label>
+                                    <input type="text" class="form-control" name="address">
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="submit" class="btn btn-primary">Register</button>
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        <?php endforeach; ?>
+
+        <!-- Call to action section-->
+        <section class="cta">
+            <div class="cta-content">
+                <div class="container px-5">
+                    <h2 class="text-white display-1 lh-1 mb-4">
+                        Stop waiting.
+                        <br />
+                        Start building.
+                    </h2>
+                    <a class="btn btn-outline-light py-3 px-4 rounded-pill" href="https://startbootstrap.com/theme/new-age" target="_blank">Download for free</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- App badge section-->
+        <section class="bg-gradient-primary-to-secondary" id="download">
+            <div class="container px-5">
+                <h2 class="text-center text-white font-alt mb-4">Get the app now!</h2>
+                <div class="d-flex flex-column flex-lg-row align-items-center justify-content-center">
+                    <a class="me-lg-3 mb-4 mb-lg-0" href="#!"><img class="app-badge" src="assets/img/google-play-badge.svg" alt="..." /></a>
+                    <a href="#!"><img class="app-badge" src="assets/img/app-store-badge.svg" alt="..." /></a>
+                </div>
+            </div>
+        </section>
+    </main>
+
     <!-- Footer-->
     <footer class="bg-black text-center py-5">
         <div class="container px-5">

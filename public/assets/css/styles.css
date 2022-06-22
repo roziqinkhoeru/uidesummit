@@ -5,3 +5,17 @@
   justify-content: center;
   align-items: center;
 }
+
+.badge_event {
+  background-color: #fff;
+  color: rgb(35, 47, 204);
+  border-radius: 9999px;
+  padding: 0.5rem 0.75rem;
+  font-size: 0.875rem;
+}
+
+.link_event {
+  text-decoration: underline;
+  color: #fff;
+  font-weight: 700;
+}
