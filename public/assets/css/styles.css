@@ -99,12 +99,21 @@
   display: block;
 }
 
+.join_event_title {
+  width: 75%;
+  margin-bottom: 3.5rem;
+}
+
 @media screen and (max-width: 991px) {
   .nav_btn_feedback {
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
+  }
+
+  .join_event_title {
+    width: 100%;
   }
 }
 

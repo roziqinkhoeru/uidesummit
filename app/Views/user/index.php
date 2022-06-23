@@ -22,7 +22,7 @@
 </head>
 
 <body id="uidesummit2022">
-    <!-- Navigation-->
+    <!-- Finish Navigation-->
     <nav class="navbar navbar-expand-lg navbar-light fixed-top shadow-sm" id="mainNav">
         <div class="container px-5">
             <a class="navbar-brand fw-bold" href="#uidesummit2022">UIDESUMMIT 2022</a>
@@ -46,7 +46,7 @@
             </div>
         </div>
     </nav>
-    <!-- Mashead header-->
+    <!-- Finish Mashead header-->
     <header class="masthead">
         <div class="container px-5">
             <div class="row gx-5 align-items-center">
@@ -121,21 +121,26 @@
         <!-- Join event -->
         <section class="bg-light" id="join_event">
             <div class="container px-5">
-                <div class="row gx-5 align-items-center justify-content-center justify-content-lg-between">
+                <div class="join_event_title">
+                    <h2 class="display-1 lh-1 mb-2">
+                        Uidesummit 2022
+                    </h2>
+                    <p class="mb-4">Choose an event according to your interests. After you register, we will send you an email as soon as possible!</p>
+                </div>
+                <div class="row g-4">
                     <?php foreach ($listEvent as $event) : ?>
                         <div class="col-4">
-                            <div class="card" style="width: 100%;">
-                                <div class="card-body">
+                            <div class="card h-100 w-100 d-flex flex-column rounded-4">
+                                <div class="card-body d-flex flex-column">
                                     <h5 class="card-title"><?= $event['name_event']; ?>
                                     </h5>
-                                    <h6 class="card-subtitle mb-2 text-muted"><?= $event['information_event']; ?>
-                                    </h6>
                                     <p class="card-text"><?= $event['date_event']; ?>
                                     </p>
-                                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#event_<?= $event['id_event']; ?>">
+                                    <h6 class="card-subtitle mb-2 text-muted"><?= $event['information_event']; ?>
+                                    </h6>
+                                    <button type="button" class="btn btn-primary mt-auto" data-bs-toggle="modal" data-bs-target="#event_<?= $event['id_event']; ?>">
                                         Register now!
                                     </button>
-
                                 </div>
                             </div>
                         </div>
@@ -256,7 +261,7 @@
         </div>
     </footer>
 
-    <!-- Feedback Modal-->
+    <!-- Finish Feedback Modal-->
     <div class="modal fade" id="feedbackModal" tabindex="-1" aria-labelledby="feedbackModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
@@ -344,7 +349,7 @@
     <?php endforeach; ?>
 
 
-    <!-- scipts -->
+    <!-- scripts -->
     <!-- Bootstrap core JS-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Core theme JS-->
