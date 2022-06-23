@@ -33,6 +33,7 @@
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ms-auto me-4 my-3 my-lg-0">
                     <li class="nav-item"><a class="nav-link me-lg-3" href="#join_event">Event</a></li>
+                    <li class="nav-item"><a class="nav-link me-lg-3" href="#workshop">Workshop</a></li>
                     <li class="nav-item"><a class="nav-link me-lg-3" href="#sponsor">Sponsor</a></li>
                 </ul>
                 <button class="btn btn-primary rounded-pill px-3 mb-2 mb-lg-0" data-bs-toggle="modal" data-bs-target="#feedbackModal">
@@ -152,6 +153,68 @@
                         Start building.
                     </h2>
                     <a class="btn btn-outline-light py-3 px-4 rounded-pill fw-bold" href="#join_event">GET FULL EVENTS</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Finish Workshop -->
+        <section class="bg-light" id="workshop">
+            <div class="container px-5">
+                <div class="row gx-5 align-items-center">
+                    <div class="col-7">
+                        <h2 class="display-1 lh-1 mb-4">
+                            Workshops<br />Free & Pro
+                        </h2>
+                        <p class="mb-3">Take full advantage of your conference experience, and get training from our best speakers and instructors. We'll cover ui design, ux design, design graphic, illustration, flat design, 3D design and while allocating enough time for practice. </p>
+                        <p class="mb-1">Check the first announced workshops:</p>
+                        <p class="mb-1"><a href="/" class="link_workshop">20+ Free Workshops</a> - included in the full ticket price.</p>
+                        <p class="mb-1"><a href="/" class="link_workshop">PRO Workshops</a> - to be purchased separately.</p>
+                    </div>
+                    <div class="col-5">
+                        <div class="row workshop_image_container">
+                            <div class="col-4">
+                                <figure class="figure_workshop"><img src="<?= base_url('assets/img/workshop-1.jpg'); ?>" alt="workshop-1" class="image_workshop"></figure>
+                            </div>
+                            <div class="col-4">
+                                <figure class="figure_workshop"><img src="<?= base_url('assets/img/workshop-2.jpg'); ?>" alt="workshop-2" class="image_workshop"></figure>
+                            </div>
+                            <div class="col-4">
+                                <figure class="figure_workshop">
+                                    <img src="<?= base_url('assets/img/workshop-3.jpg'); ?>" alt="workshop-3" class="image_workshop">
+                                </figure>
+                            </div>
+                            <div class="col-4">
+                                <figure class="figure_workshop">
+                                    <img src="<?= base_url('assets/img/workshop-4.jpg'); ?>" alt="workshop-4" class="image_workshop">
+                                </figure>
+                            </div>
+                            <div class="col-4">
+                                <figure class="figure_workshop">
+                                    <img src="<?= base_url('assets/img/workshop-5.jpg'); ?>" alt="workshop-5" class="image_workshop">
+                                </figure>
+                            </div>
+                            <div class="col-4">
+                                <figure class="figure_workshop">
+                                    <img src="<?= base_url('assets/img/workshop-6.jpg'); ?>" alt="workshop-6" class="image_workshop">
+                                </figure>
+                            </div>
+                            <div class="col-4">
+                                <figure class="figure_workshop">
+                                    <img src="<?= base_url('assets/img/workshop-7.jpg'); ?>" alt="workshop-7" class="image_workshop">
+                                </figure>
+                            </div>
+                            <div class="col-4">
+                                <figure class="figure_workshop">
+                                    <img src="<?= base_url('assets/img/workshop-8.jpg'); ?>" alt="workshop-8" class="image_workshop">
+                                </figure>
+                            </div>
+                            <div class="col-4">
+                                <figure class="figure_workshop">
+                                    <img src="<?= base_url('assets/img/workshop-9.jpg'); ?>" alt="workshop-9" class="image_workshop">
+                                </figure>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
