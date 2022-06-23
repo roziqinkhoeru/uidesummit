@@ -104,6 +104,28 @@
   margin-bottom: 3.5rem;
 }
 
+.card.card_join_event {
+  cursor: pointer;
+}
+
+.image_card {
+  width: 100%;
+  overflow: hidden;
+  height: 10rem;
+}
+
+.card-img-top.image_card_event {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: all 0.3s ease-in-out;
+}
+
+.card.card_join_event:hover .card-img-top.image_card_event {
+  transform: scale(1.1);
+}
+
 @media screen and (max-width: 991px) {
   .nav_btn_feedback {
     width: 100%;
