@@ -131,15 +131,13 @@
                     <?php foreach ($listEvent as $event) : ?>
                         <div class="col-12 col-sm-6 col-lg-4">
                             <div class="card_event">
-                                <img src="<?= base_url("assets/img/workshop-6.jpg"); ?>" class="card_event_image" alt="event-1">
+                                <img src="<?= base_url("assets/img/event/" . $event['image_event'] . ""); ?>" class="card_event_image" alt="event-1">
                                 <div class="card_event_screen"></div>
                                 <div class="card_event_body">
                                     <p class="card_event_date"><?php $strDate = $event['date_event'];
                                                                 echo date('M d<\s\u\p>S</\s\u\p>, Y', strtotime($strDate)); ?></p>
                                     <h5 class="card_event_title"><?= $event['name_event']; ?>
                                     </h5>
-                                    <!-- <h6 class="card-subtitle mb-2 text-muted"><?= $event['information_event']; ?>
-                                    </h6> -->
                                     <div class="mt-auto">
                                         <button type="button" class="btn btn_card_event shadow-none" data-bs-toggle="modal" data-bs-target="#event_<?= $event['id_event']; ?>">
                                             Register Now
@@ -310,7 +308,17 @@
                 <div class="modal-content">
                     <div class="modal-header bg-gradient-primary-to-secondary p-4 flex-column">
                         <h5 class="modal-title font-alt text-white" id="exampleModalLabel">Register</h5>
-                        <p class="model-subtitle-regist"><?= $event['name_event']; ?></p>
+                        <p class="mb-2">
+                            <a class="model-subtitle-regist" data-bs-toggle="collapse" href="#collapseEvent<?= $event['id_event']; ?>" role="button" aria-expanded="false" aria-controls="collapseEvent<?= $event['id_event']; ?>">
+                                <span><?= $event['name_event']; ?></span>
+                                <i class="bi bi-chevron-down"></i>
+                            </a>
+                        </p>
+                        <div class="collapse" id="collapseEvent<?= $event['id_event']; ?>">
+                            <div class="card_modal_desc">
+                                <p class="text-center"><?= $event['information_event']; ?></p>
+                            </div>
+                        </div>
                     </div>
                     <form action="/saveRegister/<?= $event['id_event']; ?>" method="post" id="formRegisterEvent<?= $event['id_event']; ?>">
                         <div class="modal-body">

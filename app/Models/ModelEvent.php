@@ -11,7 +11,7 @@ class ModelEvent extends Model
 
     protected $useAutoIncrement = true;
 
-    protected $allowedFields = ['name_event', 'date_event', 'information_event'];
+    protected $allowedFields = ['name_event', 'date_event', 'information_event', 'image_event'];
 
     // Get id event
     // public function getIdEvent($id_event)
