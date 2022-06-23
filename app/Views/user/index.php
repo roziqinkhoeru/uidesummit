@@ -276,31 +276,24 @@
                 <div class="modal-body border-0 p-4">
                     <form id="formFeedback" method="post" action="/sendFeedback">
                         <!-- Name input-->
-                        <div class="form-floating mb-3">
-                            <input class="form-control" id="name" name="nameFeedback" type="text" placeholder="Enter your name..." data-sb-validations="required" />
-                            <label for="name">Full name</label>
-                            <div class="invalid-feedback" data-sb-feedback="name:required">A name is required.</div>
+                        <div class="mb-3">
+                            <label for="form-control" class="form-label fw-bold">Fullname</label>
+                            <input type="text" class="form-control p-3" id="name" name="nameFeedback" placeholder="Enter your fullname">
                         </div>
-                        <!-- Email address input-->
-                        <div class="form-floating mb-3">
-                            <input class="form-control" id="email" name="emailFeedback" type="email" placeholder="name@example.com" data-sb-validations="required,email" />
-                            <label for="email">Email address</label>
-                            <div class="invalid-feedback" data-sb-feedback="email:required">An email is required.</div>
-                            <div class="invalid-feedback" data-sb-feedback="email:email">Email is not valid.</div>
+                        <!-- Email input-->
+                        <div class="mb-3">
+                            <label for="form-control" class="form-label fw-bold">Email</label>
+                            <input type="email" class="form-control p-3" id="email" name="emailFeedback" placeholder="Enter your email">
                         </div>
                         <!-- Phone number input-->
-                        <div class="form-floating mb-3">
-                            <input class="form-control" id="phone" name="phoneNumberFeedback" type="tel" placeholder="(123) 456-7890" data-sb-validations="required" />
-                            <label for="phone">Phone number</label>
-                            <div class="invalid-feedback" data-sb-feedback="phone:required">A phone number is required.
-                            </div>
+                        <div class="mb-3">
+                            <label for="form-control" class="form-label fw-bold">Phone number</label>
+                            <input type="text" class="form-control p-3" id="phone" name="phoneNumberFeedback" placeholder="Enter your phone number">
                         </div>
                         <!-- Message input-->
-                        <div class="form-floating mb-3">
-                            <textarea class="form-control" id="message" name="messageFeedback" type="text" placeholder="Enter your message here..." style="height: 10rem" data-sb-validations="required"></textarea>
-                            <label for="message">Message</label>
-                            <div class="invalid-feedback" data-sb-feedback="message:required">A message is required.
-                            </div>
+                        <div class="mb-3">
+                            <label for="form-control" class="form-label fw-bold">Message</label>
+                            <textarea class="form-control p-3" id="message" name="messageFeedback" rows="3" placeholder="Enter your message"></textarea>
                         </div>
                         <!-- Submit Button-->
                         <div class="d-grid"><button class="btn btn-primary rounded-pill btn-lg" id="submitButtonFeedback" type="submit">Submit</button></div>
@@ -373,7 +366,7 @@
     <script>
         // validatePassword with JQuery
         // feedback form
-        const exclamationCircle = "<i class='fa-solid fa-circle-exclamation'></i>";
+        const exclamationCircle = "<i class='bi bi-exclamation-circle'></i>";
 
         $(document).ready(function() {
             $("#formFeedback").validate({
@@ -386,6 +379,7 @@
                     },
                     phoneNumberFeedback: {
                         required: true,
+                        number: true,
                     },
                     messageFeedback: {
                         required: true,
@@ -397,9 +391,11 @@
                     },
                     emailFeedback: {
                         required: exclamationCircle + "Please enter your email",
+                        email: exclamationCircle + "Please enter a valid email",
                     },
                     phoneNumberFeedback: {
                         required: exclamationCircle + "Please enter your phone number",
+                        number: exclamationCircle + "Please enter a valid phone number",
                     },
                     messageFeedback: {
                         required: exclamationCircle + "Please enter your message",

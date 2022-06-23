@@ -257,6 +257,30 @@
   color: rgba(33, 37, 41, 0.7);
 }
 
+label.error {
+  color: #df4759;
+  font-size: 0.875rem;
+  margin-top: 0.5rem;
+  margin-left: 0.125rem;
+}
+
+label.error i {
+  margin-right: 0.25rem;
+}
+
+input.error,
+select.error,
+textarea.error {
+  border: 1px solid #df4759 !important;
+}
+
+input.error:focus,
+select.error:focus,
+textarea.error:focus {
+  border-color: #ff0000;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(255, 0, 0, 0.6);
+}
+
 @media screen and (max-width: 991px) {
   .nav_btn_feedback {
     width: 100%;
