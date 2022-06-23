@@ -28,6 +28,7 @@ class Event extends BaseController
             'title' => 'Uidesummit 2022',
             'listEvent' => $listEvent,
             'css' => 'styles.css',
+            'hero' => 'Showcase your design with us.',
 
         ];
         return view('user/index', $data);
@@ -59,6 +60,7 @@ class Event extends BaseController
         $data = [
             'title' => 'Privacy Policy | Uidesummit 2022',
             'css' => 'styles.css',
+            'hero' => 'Privacy and Police.',
         ];
         return view('user/privacy', $data);
     }
@@ -69,6 +71,7 @@ class Event extends BaseController
         $data = [
             'title' => 'Terms & Conditions | Uidesummit 2022',
             'css' => 'styles.css',
+            'hero' => 'Terms and Condition.',
         ];
         return view('user/terms', $data);
     }
@@ -79,6 +82,7 @@ class Event extends BaseController
         $data = [
             'title' => 'FAQ | Uidesummit 2022',
             'css' => 'styles.css',
+            'hero' => 'Frequently asked questions.',
         ];
         return view('user/faq', $data);
     }

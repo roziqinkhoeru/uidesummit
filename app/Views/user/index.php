@@ -53,7 +53,7 @@
                 <div class="col-lg-6">
                     <!-- Mashead text and app badges-->
                     <div class="mb-5 mb-lg-0 text-center text-lg-start">
-                        <h1 class="display-1 lh-1 mb-3">Showcase your design with us.</h1>
+                        <h1 class="display-1 lh-1 mb-3"><?= $hero; ?></h1>
                         <p class="lead fw-normal text-muted mb-5">Now is the time to show your creations! An annual conference on all things design, bringing together thousands of Designer engineers from all over the world.</p>
                         <div>
                             <a href="#join_event" class="btn btn-primary rounded-pill px-5 py-3 mb-4">
