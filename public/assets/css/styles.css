@@ -75,3 +75,26 @@
   padding-right: 0.25rem;
   padding-left: 0.25rem;
 }
+
+.link_badge_sponsor {
+  width: 10rem;
+  height: 10rem;
+  padding: 1.75rem;
+  margin: 1.5rem;
+  border-radius: 0.625rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.2s ease-in-out;
+}
+
+.link_badge_sponsor:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.app-badge.badge_sponsor {
+  width: 100%;
+  height: auto;
+  display: block;
+}

@@ -219,7 +219,7 @@
             </div>
         </section>
 
-        <!-- Sponsors -->
+        <!-- Finish Sponsors -->
         <section class="bg-gradient-primary-to-secondary" id="sponsor">
             <div class="container px-5">
                 <h4 class="text-center text-white font-alt mb-5">Sponsors</h4>
@@ -227,9 +227,15 @@
                 <div class="text-center mb-5">
                     <a href="mailto:info@uidesummit.com" class="link_event">@info@uidesummit.com</a>
                 </div>
-                <div class="d-flex flex-column flex-lg-row align-items-center justify-content-center">
-                    <a class="me-lg-3 mb-4 mb-lg-0" href="#!"><img class="app-badge" src="assets/img/google-play-badge.svg" alt="..." /></a>
-                    <a href="#!"><img class="app-badge" src="assets/img/app-store-badge.svg" alt="..." /></a>
+                <div class="d-flex flex-column flex-lg-row flex-wrap align-items-center justify-content-center mx-auto">
+                    <a class="link_badge_sponsor" href="#!"><img class="app-badge badge_sponsor" src="assets/img/sponsor/figma.png" alt="figma" /></a>
+                    <a class="link_badge_sponsor" href="#!"><img class="app-badge badge_sponsor" src="assets/img/sponsor/gimp.png" alt="gimp" /></a>
+                    <a class="link_badge_sponsor" href="#!"><img class="app-badge badge_sponsor" src="assets/img/sponsor/illustrator.png" alt="illustrator" /></a>
+                    <a class="link_badge_sponsor" href="#!"><img class="app-badge badge_sponsor" src="assets/img/sponsor/canva.png" alt="canva" /></a>
+                    <a class="link_badge_sponsor" href="#!"><img class="app-badge badge_sponsor" src="assets/img/sponsor/indesign.png" alt="indesign" /></a>
+                    <a class="link_badge_sponsor" href="#!"><img class="app-badge badge_sponsor" src="assets/img/sponsor/photoshop.png" alt="photoshop" /></a>
+                    <a class="link_badge_sponsor" href="#!"><img class="app-badge badge_sponsor" src="assets/img/sponsor/sketch.png" alt="sketch" /></a>
+                    <a class="link_badge_sponsor" href="#!"><img class="app-badge badge_sponsor" src="assets/img/sponsor/xd.png" alt="xd" /></a>
                 </div>
             </div>
         </section>
