@@ -127,22 +127,21 @@
                     </h2>
                     <p class="mb-4">Choose an event according to your interests. After you register, we will send you an email as soon as possible!</p>
                 </div>
-                <div class="row g-4">
+                <div class="row g-4 mb-5">
                     <?php foreach ($listEvent as $event) : ?>
-                        <div class="col-4">
-                            <div class="card card_join_event h-100 w-100 d-flex flex-column rounded-4">
-                                <div class="image_card">
-                                    <img src="<?= base_url("assets/img/workshop-3.jpg"); ?>" class="card-img-top image_card_event" alt="event-1">
-                                </div>
-                                <div class="card-body d-flex flex-column">
-                                    <h5 class="card-title"><?= $event['name_event']; ?>
+                        <div class="col-12 col-sm-6 col-lg-4">
+                            <div class="card_event">
+                                <img src="<?= base_url("assets/img/workshop-6.jpg"); ?>" class="card_event_image" alt="event-1">
+                                <div class="card_event_screen"></div>
+                                <div class="card_event_body">
+                                    <p class="card_event_date"><?php $strDate = $event['date_event'];
+                                                                echo date('M d<\s\u\p>S</\s\u\p>, Y', strtotime($strDate)); ?></p>
+                                    <h5 class="card_event_title"><?= $event['name_event']; ?>
                                     </h5>
-                                    <p class="card-text"><?php $strDate = $event['date_event'];
-                                                            echo date('F d<\s\u\p>S</\s\u\p>, Y', strtotime($strDate)); ?></p>
-                                    <h6 class="card-subtitle mb-2 text-muted"><?= $event['information_event']; ?>
-                                    </h6>
-                                    <button type="button" class="btn btn-primary mt-auto" data-bs-toggle="modal" data-bs-target="#event_<?= $event['id_event']; ?>">
-                                        Register now!
+                                    <!-- <h6 class="card-subtitle mb-2 text-muted"><?= $event['information_event']; ?>
+                                    </h6> -->
+                                    <button type="button" class="btn btn_card_event mt-auto shadow-none" data-bs-toggle="modal" data-bs-target="#event_<?= $event['id_event']; ?>">
+                                        Register Now
                                     </button>
                                 </div>
                             </div>

@@ -126,6 +126,92 @@
   transform: scale(1.1);
 }
 
+/* ========= */
+.card_event {
+  width: 100%;
+  height: 100%;
+  border-radius: 0.875rem;
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 1.625rem;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+}
+
+.card_event_image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  transition: all 0.2s ease-in-out;
+}
+
+.card_event:hover .card_event_image {
+  transform: scale(1.15);
+}
+
+.card_event_screen {
+  width: 100%;
+  height: 100%;
+  inset: 0;
+  z-index: 3;
+  position: absolute;
+  background: rgb(35, 47, 204);
+  background: -moz-linear-gradient(
+    180deg,
+    rgba(35, 47, 204, 0.96) 5%,
+    rgba(159, 26, 226, 0.16) 60%
+  );
+  background: -webkit-linear-gradient(
+    180deg,
+    rgba(35, 47, 204, 0.96) 5%,
+    rgba(159, 26, 226, 0.16) 60%
+  );
+  background: linear-gradient(
+    180deg,
+    rgba(35, 47, 204, 0.96) 5%,
+    rgba(159, 26, 226, 0.16) 60%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#232fcc",endColorstr="#9f1ae2",GradientType=1);
+}
+
+.card_event_body {
+  position: relative;
+  z-index: 5;
+}
+
+.card_event_date {
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 1rem;
+}
+
+.card_event_title {
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+  text-shadow: 0.25rem 0 1.125rem rgba(0, 0, 0, 0.7);
+}
+
+.btn_card_event {
+  background-color: #ffffff;
+  color: rgba(33, 37, 41, 1);
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  padding: 0.5rem 1rem;
+  font-weight: 700;
+  box-shadow: 0.25rem 0 1.5rem 0 rgba(0, 0, 0, 0.3);
+  transition: all 0.2s ease-in-out;
+}
+.btn_card_event:hover {
+  color: #ffffff;
+  background-color: rgb(35, 47, 204);
+}
+
 @media screen and (max-width: 991px) {
   .nav_btn_feedback {
     width: 100%;
