@@ -27,7 +27,6 @@
         <div class="container px-5">
             <a class="navbar-brand fw-bold" href="#uidesummit2022">UIDESUMMIT 2022</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                Menu
                 <i class="bi-list"></i>
             </button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
@@ -36,12 +35,14 @@
                     <li class="nav-item"><a class="nav-link me-lg-3" href="#workshop">Workshop</a></li>
                     <li class="nav-item"><a class="nav-link me-lg-3" href="#sponsor">Sponsor</a></li>
                 </ul>
-                <button class="btn btn-primary rounded-pill px-3 mb-2 mb-lg-0" data-bs-toggle="modal" data-bs-target="#feedbackModal">
-                    <span class="d-flex align-items-center">
-                        <i class="bi-chat-text-fill me-2"></i>
-                        <span class="small">Send Feedback</span>
-                    </span>
-                </button>
+                <div class="nav_btn_feedback">
+                    <button class="btn btn-primary rounded-pill px-3 mb-2 mb-lg-0" data-bs-toggle="modal" data-bs-target="#feedbackModal">
+                        <span class="d-flex align-items-center">
+                            <i class="bi-chat-text-fill me-2"></i>
+                            <span class="small">Send Feedback</span>
+                        </span>
+                    </button>
+                </div>
             </div>
         </div>
     </nav>
@@ -161,7 +162,7 @@
         <section class="bg-light" id="workshop">
             <div class="container px-5">
                 <div class="row gx-5 align-items-center">
-                    <div class="col-7">
+                    <div class="col-12 col-md-7 mb-5 mb-md-0">
                         <h2 class="display-1 lh-1 mb-4">
                             Workshops<br />Free & Pro
                         </h2>
@@ -170,7 +171,7 @@
                         <p class="mb-1"><a href="/" class="link_workshop">20+ Free Workshops</a> - included in the full ticket price.</p>
                         <p class="mb-1"><a href="/" class="link_workshop">PRO Workshops</a> - to be purchased separately.</p>
                     </div>
-                    <div class="col-5">
+                    <div class="col-12 col-md-5">
                         <div class="row workshop_image_container">
                             <div class="col-4">
                                 <figure class="figure_workshop"><img src="<?= base_url('assets/img/workshop-1.jpg'); ?>" alt="workshop-1" class="image_workshop"></figure>
@@ -221,13 +222,13 @@
 
         <!-- Finish Sponsors -->
         <section class="bg-gradient-primary-to-secondary" id="sponsor">
-            <div class="container px-5">
+            <div class="container px-lg-5">
                 <h4 class="text-center text-white font-alt mb-5">Sponsors</h4>
                 <p class="fw-normal text-center text-white mb-1">Would like to join the community and improve your tech brand?</p>
                 <div class="text-center mb-5">
                     <a href="mailto:info@uidesummit.com" class="link_event">@info@uidesummit.com</a>
                 </div>
-                <div class="d-flex flex-column flex-lg-row flex-wrap align-items-center justify-content-center mx-auto">
+                <div class="d-flex flex-row flex-wrap align-items-center justify-content-center mx-auto">
                     <a class="link_badge_sponsor" href="#!"><img class="app-badge badge_sponsor" src="assets/img/sponsor/figma.png" alt="figma" /></a>
                     <a class="link_badge_sponsor" href="#!"><img class="app-badge badge_sponsor" src="assets/img/sponsor/gimp.png" alt="gimp" /></a>
                     <a class="link_badge_sponsor" href="#!"><img class="app-badge badge_sponsor" src="assets/img/sponsor/illustrator.png" alt="illustrator" /></a>
@@ -241,11 +242,11 @@
         </section>
     </main>
 
-    <!-- Footer-->
+    <!-- Finish Footer-->
     <footer class="bg-black text-center py-5">
         <div class="container px-5">
             <div class="text-white-50 small">
-                <div class="mb-2">&copy; Your Website 2022. All Rights Reserved.</div>
+                <div class="mb-2">&copy; UIDESUMMIT 2022. All Rights Reserved.</div>
                 <a href="/privacy">Privacy</a>
                 <span class="mx-1">&middot;</span>
                 <a href="/terms">Terms</a>
@@ -254,6 +255,7 @@
             </div>
         </div>
     </footer>
+
     <!-- Feedback Modal-->
     <div class="modal fade" id="feedbackModal" tabindex="-1" aria-labelledby="feedbackModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
@@ -324,6 +326,7 @@
             </div>
         </div>
     </div>
+
     <!-- Join event modal -->
     <?php foreach ($listEvent as $event) : ?>
         <div class="modal fade" id="event_<?= $event['id_event']; ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -365,15 +368,14 @@
             </div>
         </div>
     <?php endforeach; ?>
+
+
+    <!-- scipts -->
     <!-- Bootstrap core JS-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Core theme JS-->
     <script src="<?= base_url('assets/js/scripts-user.js'); ?>">
     </script>
-    <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
-    <!-- * *                               SB Forms JS                               * *-->
-    <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
-    <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
     <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
 </body>
 

@@ -98,3 +98,21 @@
   height: auto;
   display: block;
 }
+
+@media screen and (max-width: 991px) {
+  .nav_btn_feedback {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .link_badge_sponsor {
+    width: 8rem;
+    height: 8rem;
+    padding: 1.25rem;
+    margin: 1rem;
+  }
+}
