@@ -100,36 +100,29 @@
                     <button class="btn-close btn-close-white" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body border-0 p-4">
-                    <form id="contactForm" method="post" action="/sendFeedback">
+                    <form id="formFeedback" method="post" action="/sendFeedback">
                         <!-- Name input-->
-                        <div class="form-floating mb-3">
-                            <input class="form-control" id="name" name="nameFeedback" type="text" placeholder="Enter your name..." data-sb-validations="required" />
-                            <label for="name">Full name</label>
-                            <div class="invalid-feedback" data-sb-feedback="name:required">A name is required.</div>
+                        <div class="mb-3">
+                            <label for="form-control" class="form-label fw-bold">Fullname</label>
+                            <input type="text" class="form-control p-3" id="name" name="nameFeedback" placeholder="Enter your fullname">
                         </div>
-                        <!-- Email address input-->
-                        <div class="form-floating mb-3">
-                            <input class="form-control" id="email" name="emailFeedback" type="email" placeholder="name@example.com" data-sb-validations="required,email" />
-                            <label for="email">Email address</label>
-                            <div class="invalid-feedback" data-sb-feedback="email:required">An email is required.</div>
-                            <div class="invalid-feedback" data-sb-feedback="email:email">Email is not valid.</div>
+                        <!-- Email input-->
+                        <div class="mb-3">
+                            <label for="form-control" class="form-label fw-bold">Email</label>
+                            <input type="email" class="form-control p-3" id="email" name="emailFeedback" placeholder="Enter your email">
                         </div>
                         <!-- Phone number input-->
-                        <div class="form-floating mb-3">
-                            <input class="form-control" id="phone" name="phoneNumberFeedback" type="tel" placeholder="(123) 456-7890" data-sb-validations="required" />
-                            <label for="phone">Phone number</label>
-                            <div class="invalid-feedback" data-sb-feedback="phone:required">A phone number is required.
-                            </div>
+                        <div class="mb-3">
+                            <label for="form-control" class="form-label fw-bold">Phone number</label>
+                            <input type="text" class="form-control p-3" id="phone" name="phoneNumberFeedback" placeholder="Enter your phone number">
                         </div>
                         <!-- Message input-->
-                        <div class="form-floating mb-3">
-                            <textarea class="form-control" id="message" name="messageFeedback" type="text" placeholder="Enter your message here..." style="height: 10rem" data-sb-validations="required"></textarea>
-                            <label for="message">Message</label>
-                            <div class="invalid-feedback" data-sb-feedback="message:required">A message is required.
-                            </div>
+                        <div class="mb-3">
+                            <label for="form-control" class="form-label fw-bold">Message</label>
+                            <textarea class="form-control p-3" id="message" name="messageFeedback" rows="3" placeholder="Enter your message"></textarea>
                         </div>
                         <!-- Submit Button-->
-                        <div class="d-grid"><button class="btn btn-primary rounded-pill btn-lg" id="submitButton" type="submit">Submit</button></div>
+                        <div class="d-grid"><button class="btn btn-primary rounded-pill btn-lg" id="submitButtonFeedback" type="submit">Submit</button></div>
                     </form>
                 </div>
             </div>
@@ -137,12 +130,63 @@
     </div>
 
     <!-- script -->
+    <!-- jquery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- jquery validate -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js" integrity="sha512-37T7leoNS06R80c8Ulq7cdCDU5MNQBwlYoy1TX/WUsLFC2eYNqtKlV0QjH7r8JpG/S0GUMZwebnVFLPd6SU5yg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/additional-methods.js"></script>
     <!-- Bootstrap core JS-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Core theme JS-->
     <script src="<?= base_url('assets/js/scripts-user.js'); ?>">
     </script>
     <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+
+    <script>
+        // validatePassword with JQuery
+        // feedback form
+        const exclamationCircle = "<i class='bi bi-exclamation-circle'></i>";
+
+        $(document).ready(function() {
+            $("#formFeedback").validate({
+                rules: {
+                    nameFeedback: {
+                        required: true,
+                    },
+                    emailFeedback: {
+                        required: true,
+                    },
+                    phoneNumberFeedback: {
+                        required: true,
+                        number: true,
+                    },
+                    messageFeedback: {
+                        required: true,
+                    },
+                },
+                messages: {
+                    nameFeedback: {
+                        required: exclamationCircle + "Please enter your name",
+                    },
+                    emailFeedback: {
+                        required: exclamationCircle + "Please enter your email",
+                        email: exclamationCircle + "Please enter a valid email",
+                    },
+                    phoneNumberFeedback: {
+                        required: exclamationCircle + "Please enter your phone number",
+                        number: exclamationCircle + "Please enter a valid phone number",
+                    },
+                    messageFeedback: {
+                        required: exclamationCircle + "Please enter your message",
+                    },
+                },
+            });
+
+            $("#submitButtonFeedback").on("click", () => {
+                console.log($("#formFeedback").valid());
+            });
+        });
+    </script>
 </body>
 
 </html>
