@@ -100,7 +100,7 @@
 
     <!-- main -->
     <main>
-        <!-- The event -->
+        <!-- Finish The event -->
         <aside class="text-center bg-gradient-primary-to-secondary">
             <div class="d-flex w-100 justify-content-center">
                 <p class="fw-bold mb-5 badge_event">The Event</p>
@@ -108,9 +108,8 @@
             <p class="lead fw-normal text-white mb-3">Uidesummit is a celebration of good things coming together:</p>
             <div class="container px-5">
                 <div class="row gx-5 justify-content-center">
-                    <div class="col-xl-8">
-                        <div class="h2 fs-1 text-white mb-4">An intuitive solution to a common problem that we all face,
-                            wrapped up in a single app!</div>
+                    <div class="col-xl-10">
+                        <div class="h2 fs-1 text-white mb-4">A day of freedom to be creative with your soul and September in Amsterdam that shines. The in-person program starts at 9:00 CEST whereas the live stream starts at 13:00 CEST.<br />Stay tuned!</div>
                         <a href="/" class="link_event">@UIDESUMMIT 2022</a>
                     </div>
                 </div>
