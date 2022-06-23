@@ -101,7 +101,7 @@
     <!-- main -->
     <main>
         <!-- Finish The event -->
-        <aside class="text-center bg-gradient-primary-to-secondary">
+        <aside class="text-center bg-gradient-primary-to-secondary" id="event_banner">
             <div class="d-flex w-100 justify-content-center">
                 <p class="fw-bold mb-5 badge_event">The Event</p>
             </div>
@@ -142,7 +142,7 @@
             </div>
         </section>
 
-        <!-- Call to action section-->
+        <!-- Finish Call to action section-->
         <section class="cta">
             <div class="cta-content">
                 <div class="container px-5">
@@ -151,7 +151,7 @@
                         <br />
                         Start building.
                     </h2>
-                    <a class="btn btn-outline-light py-3 px-4 rounded-pill" href="#join_event" target="_blank">GET FULL EVENTS</a>
+                    <a class="btn btn-outline-light py-3 px-4 rounded-pill fw-bold" href="#join_event">GET FULL EVENTS</a>
                 </div>
             </div>
         </section>
