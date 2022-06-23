@@ -140,8 +140,8 @@
                                     </h5>
                                     <!-- <h6 class="card-subtitle mb-2 text-muted"><?= $event['information_event']; ?>
                                     </h6> -->
-                                    <div>
-                                        <button type="button" class="btn btn_card_event mt-auto shadow-none" data-bs-toggle="modal" data-bs-target="#event_<?= $event['id_event']; ?>">
+                                    <div class="mt-auto">
+                                        <button type="button" class="btn btn_card_event shadow-none" data-bs-toggle="modal" data-bs-target="#event_<?= $event['id_event']; ?>">
                                             Register Now
                                         </button>
                                     </div>
@@ -310,7 +310,7 @@
         </div>
     </div>
 
-    <!-- Join event modal -->
+    <!-- Finish Join event modal -->
     <?php foreach ($listEvent as $event) : ?>
         <div class="modal fade" id="event_<?= $event['id_event']; ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered">
@@ -346,8 +346,8 @@
                                 <label for="address">Address</label>
                             </div>
                             <div class="modal-footer modal_footer">
-                                <button type="button" class="btn" data-bs-dismiss="modal">Close</button>
-                                <button type="submit" class="btn btn-primary ms-4">Register</button>
+                                <button type="button" class="btn modal_submit_btn close_btn" data-bs-dismiss="modal">Close</button>
+                                <button type="submit" class="btn btn-primary ms-3 modal_submit_btn">Register</button>
                             </div>
                         </div>
                     </form>
