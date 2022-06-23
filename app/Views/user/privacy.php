@@ -58,7 +58,7 @@
 
     <!-- main -->
     <main>
-        <section class="bg-light">
+        <section class="bg-light" id="privacy">
             <div class="container">
                 <div class="privacy_container">
                     <p class="mb-5 fst-italic text_privacy">Effective: January 1, 2022.</p>

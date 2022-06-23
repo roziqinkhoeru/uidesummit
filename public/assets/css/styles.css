@@ -217,12 +217,14 @@
   color: rgba(0, 0, 0, 1);
 }
 
-.privacy_container {
+.privacy_container,
+.terms_container {
   width: 60%;
   margin: 0 auto;
 }
 
-.text_privacy {
+.text_privacy,
+.text_terms {
   font-size: 1.125rem;
   color: rgba(0, 0, 0, 0.84);
 }
@@ -248,17 +250,20 @@
     margin: 1rem;
   }
 
-  .privacy_container {
+  .privacy_container,
+  .terms_container {
     width: 80%;
   }
 }
 
 @media screen and (max-width: 480px) {
-  .privacy_container {
+  .privacy_container,
+  .terms_container {
     width: 100%;
   }
 
-  .text_privacy {
+  .text_privacy,
+  .text_terms {
     font-size: 1rem;
   }
 }
