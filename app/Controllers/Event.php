@@ -4,16 +4,19 @@ namespace App\Controllers;
 
 use App\Models\ModelEvent;
 use App\Models\ModelRegistrant;
+use App\Models\ModelFeedback;
 
 class Event extends BaseController
 {
     protected $modelEvent;
     protected $modelRegistrant;
+    protected $modelFeedback;
 
     public function __construct()
     {
         $this->modelEvent = new ModelEvent();
         $this->modelRegistrant = new ModelRegistrant();
+        $this->modelFeedback = new ModelFeedback();
     }
 
     // view index
@@ -78,5 +81,28 @@ class Event extends BaseController
             'css' => 'styles.css',
         ];
         return view('user/faq', $data);
+    }
+
+    // function save feedback
+    public function saveFeedback()
+    {
+        $name = $this->request->getPost('nameFeedback');
+        $email = $this->request->getPost('emailFeedbak');
+        $phone_number = $this->request->getPost('phoneNumberFeedback');
+        $message = $this->request->getPost('messageFeedback');
+
+        $feedback = [
+            'name' => $name,
+            'email' => $email,
+            'phone_number' => $phone_number,
+            'message' => $message,
+        ];
+        $query = $this->modelFeedback->insert($feedback);
+        if ($query) {
+            session()->setFlashdata('success', 'Data berhasil ditambahkan');
+        } else {
+            session()->setFlashdata('error', 'Data gagal ditambahkan');
+        }
+        return redirect()->to('/');
     }
 }
