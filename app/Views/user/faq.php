@@ -60,7 +60,41 @@
     <main>
         <section class="bg-light" id="faq">
             <div class="container">
-                <div class="faq_container"></div>
+                <div class="faq_container">
+                    <h2 class="display-1 lh-1 mb-5 text-center">FAQ</h2>
+                    <div class="row g-4">
+                        <div class="col-12 col-md-6">
+                            <div class="card_faq">
+                                <h5 class="mb-2">Lorem ipsum dolor sit amet</h5>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae, cupiditate, ut exercitationem ullam, optio vero blanditiis incidunt aspernatur suscipit molestias possimus enim/</p>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <div class="card_faq">
+                                <h5 class="mb-2">Libero architecto minus commodi quos eos?</h5>
+                                <p>Quam deserunt ut inventore placeat quae cum vel, quibusdam esse provident et obcaecati reprehenderit debitis sint amet.</p>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <div class="card_faq">
+                                <h5 class="mb-2">Velit exercitationem sint enim error?</h5>
+                                <p>Ratione unde modi earum provident, hic possimus neque delectus ipsa harum! Consequatur quam molestias explicabo, voluptas unde tempora cumque beatae eveniet velit!</p>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <div class="card_faq">
+                                <h5 class="mb-2">Exercitationem quos dolorum voluptas laudantium. Possimus?</h5>
+                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum repudiandae placeat alias veniam possimus molestiae, sunt asperiores dolores fugit quis rem nesciunt, porro quam dolorum expedita tempore reiciendis accusantium ipsa.</p>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <div class="card_faq">
+                                <h5 class="mb-2">Aspernatur quo illum placeat sunt sequi repellendus?</h5>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo quidem facilis dolore laudantium alias amet repudiandae autem, et numquam facere iste corrupti optio reprehenderit? Maiores nam mollitia excepturi molestiae velit?</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
