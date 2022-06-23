@@ -140,9 +140,11 @@
                                     </h5>
                                     <!-- <h6 class="card-subtitle mb-2 text-muted"><?= $event['information_event']; ?>
                                     </h6> -->
-                                    <button type="button" class="btn btn_card_event mt-auto shadow-none" data-bs-toggle="modal" data-bs-target="#event_<?= $event['id_event']; ?>">
-                                        Register Now
-                                    </button>
+                                    <div>
+                                        <button type="button" class="btn btn_card_event mt-auto shadow-none" data-bs-toggle="modal" data-bs-target="#event_<?= $event['id_event']; ?>">
+                                            Register Now
+                                        </button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -311,38 +313,42 @@
     <!-- Join event modal -->
     <?php foreach ($listEvent as $event) : ?>
         <div class="modal fade" id="event_<?= $event['id_event']; ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
+            <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Register </h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <div class="modal-header bg-gradient-primary-to-secondary p-4 flex-column">
+                        <h5 class="modal-title font-alt text-white" id="exampleModalLabel">Register</h5>
+                        <p class="model-subtitle-regist"><?= $event['name_event']; ?></p>
                     </div>
                     <form action="/saveRegister/<?= $event['id_event']; ?>" method="post">
                         <div class="modal-body">
                             <!-- name -->
-                            <div class="mb-3">
-                                <label for="fullname" class="form-label">Fullname</label>
-                                <input type="text" class="form-control" name="fullname">
+                            <div class="form-floating mb-3">
+                                <input class="form-control" id="fullname" name="fullname" type="text" placeholder="Enter your name..." data-sb-validations="required" />
+                                <label for="fullname">Full name</label>
+                                <div class="invalid-feedback" data-sb-feedback="name:required">A name is required.</div>
                             </div>
                             <!-- date birth -->
-                            <div class="mb-3">
-                                <label for="date_birth" class="form-label">Date of birth</label>
-                                <input type="date" class="form-control" name="date_birth">
+                            <div class="form-floating mb-3">
+                                <input class="form-control" id="date_birth" name="date_birth" type="date" placeholder="Enter your date of birth..." data-sb-validations="required" />
+                                <label for="date_birth">Date of birth</label>
+                                <div class="invalid-feedback" data-sb-feedback="datebirth:required">A date of birth is required.</div>
                             </div>
                             <!-- email -->
-                            <div class="mb-3">
-                                <label for="email" class="form-label">Email</label>
-                                <input type="email" class="form-control" name="email">
+                            <div class="form-floating mb-3">
+                                <input class="form-control" id="email" name="email" type="email" placeholder="Enter your email" data-sb-validations="required,email" />
+                                <label for="email">Email address</label>
+                                <div class="invalid-feedback" data-sb-feedback="email:required">An email is required.</div>
+                                <div class="invalid-feedback" data-sb-feedback="email:email">Email is not valid.</div>
                             </div>
                             <!-- address -->
-                            <div class="mb-3">
-                                <label for="address" class="form-label">Address</label>
-                                <input type="text" class="form-control" name="address">
+                            <div class="form-floating mb-3">
+                                <textarea class="form-control" placeholder="Enter your address" id="address" name="address" style="height: 100px"></textarea>
+                                <label for="address">Address</label>
                             </div>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="submit" class="btn btn-primary">Register</button>
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <div class="modal-footer modal_footer">
+                                <button type="button" class="btn" data-bs-dismiss="modal">Close</button>
+                                <button type="submit" class="btn btn-primary ms-4">Register</button>
+                            </div>
                         </div>
                     </form>
                 </div>
