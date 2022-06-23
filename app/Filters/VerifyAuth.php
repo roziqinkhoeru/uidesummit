@@ -10,8 +10,8 @@ class VerifyAuth implements FilterInterface
 {
     public function before(RequestInterface $request, $arguments = null)
     {
-        if (! session()->has('login')) {
-            return redirect()->to('/login')->with('error', 'You must login first');
+        if (!session()->has('login')) {
+            return redirect()->to('/admin/login')->with('error', 'You must login first');
         }
     }
 

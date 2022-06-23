@@ -35,8 +35,8 @@ $routes->set404Override();
 
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
-$routes->get('/login', 'Auth::login');
-$routes->get('/logout', 'Auth::logout');
+$routes->get('/admin/login', 'Auth::login');
+$routes->get('/admin/logout', 'Auth::logout');
 $routes->add('/auth/(:any)', 'Auth::$1');
 
 $routes->group('', ['filter' => 'VerifyAuth'], function ($routes) {

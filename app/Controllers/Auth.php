@@ -8,7 +8,7 @@ use App\Models\ModelAuth;
 class Auth extends BaseController
 {
     protected $modelAuth;
-    
+
     public function __construct()
     {
         $this->modelAuth = new ModelAuth();
@@ -22,7 +22,7 @@ class Auth extends BaseController
         ];
         return view('auth/login', $data);
     }
-    
+
     // function check authentication
     public function checkAuth()
     {
@@ -32,7 +32,7 @@ class Auth extends BaseController
         $verify_password = Hash::verify($password, $user['password']);
         if (!$verify_password) {
             $this->session->setFlashdata('error', 'Email or Password is incorrect');
-            return redirect()->to('/login')->withInput();
+            return redirect()->to('/admin/login')->withInput();
         } else {
             $id_user = $user['id'];
             $this->session->set('login', $id_user);
@@ -44,6 +44,6 @@ class Auth extends BaseController
     public function logout()
     {
         $this->session->destroy();
-        return redirect()->to('/login');
+        return redirect()->to('/admin/login');
     }
 }
