@@ -60,7 +60,7 @@ class Event extends BaseController
         $data = [
             'title' => 'Privacy Policy | Uidesummit 2022',
             'css' => 'styles.css',
-            'hero' => 'Privacy and Police.',
+            'hero' => 'Privacy and Policy.',
         ];
         return view('user/privacy', $data);
     }
@@ -71,7 +71,7 @@ class Event extends BaseController
         $data = [
             'title' => 'Terms & Conditions | Uidesummit 2022',
             'css' => 'styles.css',
-            'hero' => 'Terms and Condition.',
+            'hero' => 'Terms and Conditions.',
         ];
         return view('user/terms', $data);
     }

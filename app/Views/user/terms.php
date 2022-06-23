@@ -50,7 +50,7 @@
                 <div class="col-lg-6">
                     <!-- Mashead text and app badges-->
                     <div class="mb-5 mb-lg-0 text-center text-lg-start">
-                        <h1 class="display-1 lh-1 mb-3 text-white">Privacy and Policy</h1>
+                        <h1 class="display-1 lh-1 mb-3 text-white"><?= $hero; ?></h1>
                     </div>
                 </div>
             </div>

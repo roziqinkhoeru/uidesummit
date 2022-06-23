@@ -217,6 +217,16 @@
   color: rgba(0, 0, 0, 1);
 }
 
+.privacy_container {
+  width: 60%;
+  margin: 0 auto;
+}
+
+.text_privacy {
+  font-size: 1.125rem;
+  color: rgba(0, 0, 0, 0.84);
+}
+
 @media screen and (max-width: 991px) {
   .nav_btn_feedback {
     width: 100%;
@@ -236,5 +246,19 @@
     height: 8rem;
     padding: 1.25rem;
     margin: 1rem;
+  }
+
+  .privacy_container {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .privacy_container {
+    width: 100%;
+  }
+
+  .text_privacy {
+    font-size: 1rem;
   }
 }

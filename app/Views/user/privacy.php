@@ -49,7 +49,7 @@
                 <div class="col-lg-6">
                     <!-- Mashead text and app badges-->
                     <div class="mb-5 mb-lg-0 text-center text-lg-start">
-                        <h1 class="display-1 lh-1 mb-3 text-white">Privacy and Policy</h1>
+                        <h1 class="display-1 lh-1 mb-3 text-white"><?= $hero; ?></h1>
                     </div>
                 </div>
             </div>
@@ -58,6 +58,19 @@
 
     <!-- main -->
     <main>
+        <section class="bg-light">
+            <div class="container">
+                <div class="privacy_container">
+                    <p class="mb-5 fst-italic text_privacy">Effective: January 1, 2022.</p>
+                    <p class="text_privacy">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officia debitis blanditiis perspiciatis omnis aspernatur veniam molestias fuga ex inventore autem iure natus, reprehenderit id cupiditate delectus, neque illo vel maiores. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident laudantium quo neque consequuntur velit, quas quaerat quibusdam facere aut perspiciatis? Illum deleniti impedit, culpa tempore molestias pariatur numquam accusamus ratione.</p>
+                    <p class="text_privacy">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam nobis, suscipit est sint animi illum aut consequatur, ipsum asperiores consectetur doloribus, enim in nulla vel perspiciatis reprehenderit quidem libero numquam.</p>
+                    <p class="text_privacy">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim, molestiae. Rem, accusamus aspernatur numquam reprehenderit consequuntur dicta inventore. Quod ducimus ratione voluptatem animi fugiat placeat sint a et cupiditate est! Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum expedita tempore reprehenderit, hic totam recusandae officiis fugiat. Similique perferendis impedit tempora, cumque sapiente modi minus aliquid tempore pariatur aperiam obcaecati? Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis maxime nesciunt excepturi, alias soluta quisquam quia magni dicta delectus suscipit quas fuga officia tenetur dolorum asperiores accusamus ullam inventore debitis.</p>
+                    <p class="text_privacy">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut laboriosam pariatur labore culpa repellat temporibus iusto odit! Sunt, odio placeat, quis cupiditate consequatur eum perferendis veritatis, at esse amet voluptatum? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nisi illum suscipit minus fugiat esse, excepturi quo reiciendis eius non saepe a alias debitis ipsa itaque, autem nulla dicta dolor. Molestias?</p>
+                    <p class="text_privacy">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Libero vero perspiciatis sed distinctio sapiente natus nemo possimus laborum, molestias excepturi. Cumque repellendus voluptatibus aut at repudiandae fuga accusamus nemo ipsam.</p>
+                    <p class="text_privacy">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore odit temporibus dolores, libero recusandae sed, necessitatibus perferendis ut molestias rerum mollitia vel, aperiam est. Temporibus voluptatibus eius corporis numquam suscipit!</p>
+                </div>
+            </div>
+        </section>
     </main>
 
     <!-- Finish Footer-->
