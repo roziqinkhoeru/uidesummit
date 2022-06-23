@@ -58,6 +58,11 @@
 
     <!-- main -->
     <main>
+        <section class="bg-light" id="faq">
+            <div class="container">
+                <div class="faq_container"></div>
+            </div>
+        </section>
     </main>
 
     <!-- Finish Footer-->
