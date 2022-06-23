@@ -274,7 +274,7 @@
                     <button class="btn-close btn-close-white" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body border-0 p-4">
-                    <form id="contactForm" method="post" action="/sendFeedback">
+                    <form id="formFeedback" method="post" action="/sendFeedback">
                         <!-- Name input-->
                         <div class="form-floating mb-3">
                             <input class="form-control" id="name" name="nameFeedback" type="text" placeholder="Enter your name..." data-sb-validations="required" />
@@ -303,7 +303,7 @@
                             </div>
                         </div>
                         <!-- Submit Button-->
-                        <div class="d-grid"><button class="btn btn-primary rounded-pill btn-lg" id="submitButton" type="submit">Submit</button></div>
+                        <div class="d-grid"><button class="btn btn-primary rounded-pill btn-lg" id="submitButtonFeedback" type="submit">Submit</button></div>
                     </form>
                 </div>
             </div>
@@ -358,12 +358,60 @@
 
 
     <!-- scripts -->
+    <!-- jquery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- jquery validate -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js" integrity="sha512-37T7leoNS06R80c8Ulq7cdCDU5MNQBwlYoy1TX/WUsLFC2eYNqtKlV0QjH7r8JpG/S0GUMZwebnVFLPd6SU5yg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/additional-methods.js"></script>
     <!-- Bootstrap core JS-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Core theme JS-->
     <script src="<?= base_url('assets/js/scripts-user.js'); ?>">
     </script>
     <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+
+    <script>
+        // validatePassword with JQuery
+        // feedback form
+        const exclamationCircle = "<i class='fa-solid fa-circle-exclamation'></i>";
+
+        $(document).ready(function() {
+            $("#formFeedback").validate({
+                rules: {
+                    nameFeedback: {
+                        required: true,
+                    },
+                    emailFeedback: {
+                        required: true,
+                    },
+                    phoneNumberFeedback: {
+                        required: true,
+                    },
+                    messageFeedback: {
+                        required: true,
+                    },
+                },
+                messages: {
+                    nameFeedback: {
+                        required: exclamationCircle + "Please enter your name",
+                    },
+                    emailFeedback: {
+                        required: exclamationCircle + "Please enter your email",
+                    },
+                    phoneNumberFeedback: {
+                        required: exclamationCircle + "Please enter your phone number",
+                    },
+                    messageFeedback: {
+                        required: exclamationCircle + "Please enter your message",
+                    },
+                },
+            });
+
+            $("#submitButtonFeedback").on("click", () => {
+                console.log($("#formFeedback").valid());
+            });
+        });
+    </script>
 </body>
 
 </html>
