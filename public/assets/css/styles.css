@@ -140,17 +140,17 @@
   background: -moz-linear-gradient(
     180deg,
     rgba(35, 47, 204, 0.96) 5%,
-    rgba(159, 26, 226, 0.16) 60%
+    rgba(159, 26, 226, 0.4) 60%
   );
   background: -webkit-linear-gradient(
     180deg,
     rgba(35, 47, 204, 0.96) 5%,
-    rgba(159, 26, 226, 0.16) 60%
+    rgba(159, 26, 226, 0.4) 60%
   );
   background: linear-gradient(
     180deg,
     rgba(35, 47, 204, 0.96) 5%,
-    rgba(159, 26, 226, 0.16) 60%
+    rgba(159, 26, 226, 0.4) 60%
   );
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#232fcc",endColorstr="#9f1ae2",GradientType=1);
 }

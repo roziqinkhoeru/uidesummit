@@ -24,7 +24,7 @@
 <body id="uidesummit2022">
     <!-- Navigation-->
     <nav class="navbar navbar-expand-lg navbar-light fixed-top shadow-sm" id="mainNav">
-        <div class="container px-5">
+        <div class="container px-3 px-sm-5">
             <a class="navbar-brand fw-bold" href="/">UIDESUMMIT 2022</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                 <i class="bi-list"></i>
