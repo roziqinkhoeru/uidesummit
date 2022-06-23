@@ -57,7 +57,7 @@ class Event extends BaseController
     public function privacy()
     {
         $data = [
-            'title' => 'Privacy Policy',
+            'title' => 'Privacy Policy | Uidesummit 2022',
             'css' => 'styles.css',
         ];
         return view('user/privacy', $data);
@@ -67,7 +67,7 @@ class Event extends BaseController
     public function terms()
     {
         $data = [
-            'title' => 'Terms & Conditions',
+            'title' => 'Terms & Conditions | Uidesummit 2022',
             'css' => 'styles.css',
         ];
         return view('user/terms', $data);
@@ -77,7 +77,7 @@ class Event extends BaseController
     public function faq()
     {
         $data = [
-            'title' => 'FAQ',
+            'title' => 'FAQ | Uidesummit 2022',
             'css' => 'styles.css',
         ];
         return view('user/faq', $data);
