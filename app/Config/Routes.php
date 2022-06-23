@@ -50,6 +50,7 @@ $routes->get('/privacy', 'Event::privacy');
 $routes->get('/terms', 'Event::terms');
 $routes->get('/faq', 'Event::faq');
 $routes->add('/saveRegister/(:any)', 'Event::saveRegister/$1');
+$routes->add('/sendFeedback', 'Event::saveFeedback');
 
 /*
  * --------------------------------------------------------------------

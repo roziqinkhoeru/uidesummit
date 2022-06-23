@@ -87,7 +87,7 @@ class Event extends BaseController
     public function saveFeedback()
     {
         $name = $this->request->getPost('nameFeedback');
-        $email = $this->request->getPost('emailFeedbak');
+        $email = $this->request->getPost('emailFeedback');
         $phone_number = $this->request->getPost('phoneNumberFeedback');
         $message = $this->request->getPost('messageFeedback');
 
