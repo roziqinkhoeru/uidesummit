@@ -34,6 +34,15 @@ class Event extends BaseController
         return view('user/index', $data);
     }
 
+    // count rows
+    function data_model()
+    {
+        $this->db->select('*');
+        $this->db->from('event');
+        $sum_rows = $this->db->get()->num_rows();
+        return $sum_rows;
+    }
+
     // save register
     public function saveRegister($id_event)
     {

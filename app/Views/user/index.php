@@ -312,35 +312,32 @@
                         <h5 class="modal-title font-alt text-white" id="exampleModalLabel">Register</h5>
                         <p class="model-subtitle-regist"><?= $event['name_event']; ?></p>
                     </div>
-                    <form action="/saveRegister/<?= $event['id_event']; ?>" method="post">
+                    <form action="/saveRegister/<?= $event['id_event']; ?>" method="post" id="formRegisterEvent<?= $event['id_event']; ?>">
                         <div class="modal-body">
                             <!-- name -->
-                            <div class="form-floating mb-3">
-                                <input class="form-control" id="fullname" name="fullname" type="text" placeholder="Enter your name..." data-sb-validations="required" />
-                                <label for="fullname">Full name</label>
-                                <div class="invalid-feedback" data-sb-feedback="name:required">A name is required.</div>
+                            <div class="mb-3">
+                                <label for="form-control" class="form-label fw-bold">Fullname</label>
+                                <input type="text" class="form-control p-3" id="fullname" name="fullname" placeholder="Enter your fullname">
                             </div>
                             <!-- date birth -->
-                            <div class="form-floating mb-3">
-                                <input class="form-control" id="date_birth" name="date_birth" type="date" placeholder="Enter your date of birth..." data-sb-validations="required" />
-                                <label for="date_birth">Date of birth</label>
-                                <div class="invalid-feedback" data-sb-feedback="datebirth:required">A date of birth is required.</div>
+                            <div class="mb-3">
+                                <label for="form-control" class="form-label fw-bold">Date of birth</label>
+                                <input type="date" class="form-control p-3" id="date_birth" name="date_birth">
                             </div>
                             <!-- email -->
-                            <div class="form-floating mb-3">
-                                <input class="form-control" id="email" name="email" type="email" placeholder="Enter your email" data-sb-validations="required,email" />
-                                <label for="email">Email address</label>
-                                <div class="invalid-feedback" data-sb-feedback="email:required">An email is required.</div>
-                                <div class="invalid-feedback" data-sb-feedback="email:email">Email is not valid.</div>
+                            <div class="mb-3">
+                                <label for="form-control" class="form-label fw-bold">Email</label>
+                                <input type="email" class="form-control p-3" id="email" name="email" placeholder="Enter your email">
                             </div>
                             <!-- address -->
-                            <div class="form-floating mb-3">
-                                <textarea class="form-control" placeholder="Enter your address" id="address" name="address" style="height: 100px"></textarea>
-                                <label for="address">Address</label>
+                            <div class="mb-3">
+                                <label for="form-control" class="form-label fw-bold">Address</label>
+                                <input type="text" class="form-control p-3" id="address" name="address" placeholder="Enter your address">
                             </div>
+                            <!-- footer button -->
                             <div class="modal-footer modal_footer">
                                 <button type="button" class="btn modal_submit_btn close_btn" data-bs-dismiss="modal">Close</button>
-                                <button type="submit" class="btn btn-primary ms-3 modal_submit_btn">Register</button>
+                                <button type="submit" class="btn btn-primary ms-3 modal_submit_btn" id="buttonRegisterEvent<?= $event['id_event']; ?>">Register</button>
                             </div>
                         </div>
                     </form>
@@ -406,6 +403,44 @@
             $("#submitButtonFeedback").on("click", () => {
                 console.log($("#formFeedback").valid());
             });
+
+            <?php foreach ($listEvent as $event) : ?>
+                $("#formRegisterEvent<?= $event['id_event']; ?>").validate({
+                    rules: {
+                        fullname: {
+                            required: true,
+                        },
+                        date_birth: {
+                            required: true,
+                        },
+                        email: {
+                            required: true,
+                        },
+                        address: {
+                            required: true,
+                        },
+                    },
+                    messages: {
+                        fullname: {
+                            required: exclamationCircle + "Please enter your name",
+                        },
+                        date_birth: {
+                            required: exclamationCircle + "Please enter your date of birth",
+                        },
+                        email: {
+                            required: exclamationCircle + "Please enter your email",
+                            email: exclamationCircle + "Please enter a valid email",
+                        },
+                        address: {
+                            required: exclamationCircle + "Please enter your address",
+                        },
+                    },
+                });
+
+                $("#buttonRegisterEvent<?= $event['id_event']; ?>").on("click", () => {
+                    console.log($("#formRegisterEvent<?= $event['id_event']; ?>").valid());
+                });
+            <?php endforeach; ?>
         });
     </script>
 </body>
