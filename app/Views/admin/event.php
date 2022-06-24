@@ -11,9 +11,9 @@
 
     <!-- DataTales Example -->
     <div class="card shadow mb-4">
-        <div class="card-header py-3">
-            <h6 class="m-0 font-weight-bold text-primary">Event</h6>
-            <a href="/event/addEvent"><i class="fa-solid fa-plus"></i><span>Add event</span></a>
+        <div class="card-header py-3 d-flex align-items-center justify-content-between">
+            <h5 class="m-0 font-weight-bold text-primary">Event</h5>
+            <a href="/event/addEvent" class="btn btn-primary d-flex align-items-center"><i class="fa-solid fa-plus mr-2 d-block"></i><span class="d-block">Add event</span></a>
         </div>
         <div class="card-body">
             <div class="table-responsive">
@@ -28,27 +28,23 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <?php $i=1; ?>
-                        <?php foreach ($listEvent as $event) :?>
-                        <tr>
-                            <td><?= $i++; ?>
-                            </td>
-                            <td><?= $event['name_event']; ?>
-                            </td>
-                            <td><?= $event['date_event']; ?>
-                            </td>
-                            <td><?= $event['information_event']; ?>
-                            </td>
-                            <td>
-                                <a
-                                    href="/event/editEvent/<?= $event['id_event']; ?>"><i
-                                        class="fa-solid fa-pen-to-square"></i></a>
-                                <a
-                                    href="/event/deleteEvent/<?= $event['id_event']; ?>"><i
-                                        class="fa-solid fa-trash"></i></a>
-                                <a href="/event/viewRegistrantEvent/<?= $event['id_event']; ?>"><i class="fa-solid fa-eye"></i></a>
-                            </td>
-                        </tr>
+                        <?php $i = 1; ?>
+                        <?php foreach ($listEvent as $event) : ?>
+                            <tr>
+                                <td><?= $i++; ?>
+                                </td>
+                                <td><?= $event['name_event']; ?>
+                                </td>
+                                <td><?= $event['date_event']; ?>
+                                </td>
+                                <td><?= $event['information_event']; ?>
+                                </td>
+                                <td>
+                                    <a href="/event/editEvent/<?= $event['id_event']; ?>"><i class="fa-solid fa-pen-to-square"></i></a>
+                                    <a href="/event/deleteEvent/<?= $event['id_event']; ?>"><i class="fa-solid fa-trash"></i></a>
+                                    <a href="/event/viewRegistrantEvent/<?= $event['id_event']; ?>"><i class="fa-solid fa-eye"></i></a>
+                                </td>
+                            </tr>
                         <?php endforeach; ?>
                     </tbody>
                 </table>
