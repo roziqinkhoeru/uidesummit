@@ -6,8 +6,18 @@
 <div class="container-fluid">
 
     <!-- Page Heading -->
-    <h1 class="h3 mb-2 text-gray-800">Add events</h1>
-    <p class="mb-4">A form to add new event data to be held.</p>
+    <div class="d-flex justify-content-between align-items-center">
+        <div>
+            <h1 class="h3 mb-2 text-gray-800">Add events</h1>
+            <p class="mb-4">A form to add new event data to be held.</p>
+        </div>
+        <div>
+            <a href="/event" class="btn d-flex align-items-center">
+                <i class="fa-solid fa-angle-left mr-2 d-block"></i>
+                <span class="d-block">Back</span>
+            </a>
+        </div>
+    </div>
 
     <!-- DataTales Example -->
     <div class="card shadow mb-4">
