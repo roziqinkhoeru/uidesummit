@@ -10,6 +10,7 @@
 
     <title><?= $title; ?>
     </title>
+    <link rel="icon" type="image/x-icon" href="<?= base_url('assets/favicon.ico'); ?>" />
 
     <!-- Custom fonts for this template-->
     <link href="<?= base_url('assets/vendor/fontawesome-free/css/all.min.css'); ?>" rel="stylesheet" type="text/css" />
@@ -18,7 +19,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- Custom styles for this template-->
     <link href="<?= base_url('assets/css/sb-admin-2.min.css'); ?>" rel="stylesheet" />
-    <?= $css; ?>
+    <link href="<?= base_url('assets/css/' . $css . ''); ?>" rel="stylesheet" />
 </head>
 
 <body id="page-top">
@@ -35,7 +36,7 @@
             <hr class="sidebar-divider my-0" />
 
             <!-- Nav Item - Dashboard -->
-            <li class="nav-item <?= ($tab == 'dashboard') ? 'active' : ''; ?>">
+            <li class="nav-item nav_item <?= ($tab == 'dashboard') ? 'active' : ''; ?>">
                 <a class="nav-link" href="/dashboard">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Dashboard</span></a>
@@ -48,7 +49,7 @@
             <div class="sidebar-heading">Event management</div>
 
             <!-- Nav Item - events -->
-            <li class="nav-item <?= ($tab == 'event') ? 'active' : ''; ?>">
+            <li class="nav-item nav_item <?= ($tab == 'event') ? 'active' : ''; ?>">
                 <a class="nav-link" href="/event">
                     <i class="fas fa-fw fa-chart-area"></i>
                     <span>Event</span></a>
@@ -63,15 +64,16 @@
             </div>
 
             <!-- Sidebar Message -->
-            <div class="sidebar-card d-none d-lg-flex">
-                <p class="text-center mb-2">
-                    <strong>UIDESUMMIT 2022</strong> is packed with premium features,
-                    components, and more!
-                </p>
+            <div class="sidebar_message">
+                <div class="sidebar-card d-none d-lg-flex">
+                    <p class="text-center mb-2">
+                        <strong>UIDESUMMIT 2022</strong> An annual conference on all things design, bringing together thousands of Designer engineers from all over the world.
+                    </p>
+                </div>
             </div>
 
             <!-- Nav Item - logout -->
-            <li class="nav-item">
+            <li class="nav-item nav_item">
                 <a class="nav-link" href="/admin/logout">
                     <i class="fa-solid fa-arrow-right-from-bracket"></i>
                     <span>Logout</span></a>

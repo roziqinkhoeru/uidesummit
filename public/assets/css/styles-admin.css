@@ -1,0 +1,11 @@
+.nav-item.nav_item .nav-link {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.sidebar_message {
+  display: block;
+}
+
+.sidebar.toggled .sidebar_message {
+  display: none;
+}

@@ -22,7 +22,7 @@ class Admin extends BaseController
 
         $data = [
             'title' => 'Dashboard Admin | Uidesummit 2022',
-            'css' => '',
+            'css' => 'styles-admin.css',
             'tab' => 'dashboard',
         ];
 
@@ -36,7 +36,7 @@ class Admin extends BaseController
 
         $data = [
             'title' => 'Event | Uidesummit 2022',
-            'css' => '',
+            'css' => 'styles-admin.css',
             'tab' => 'event',
             'listEvent' => $listEvent,
         ];
@@ -49,7 +49,7 @@ class Admin extends BaseController
     {
         $data = [
             'title' => 'Add Event | Uidesummit 2022',
-            'css' => '',
+            'css' => 'styles-admin.css',
             'tab' => 'event',
         ];
 
@@ -92,7 +92,7 @@ class Admin extends BaseController
 
         $data = [
             'title' => 'Edit Event | Uidesummit 2022',
-            'css' => '',
+            'css' => 'styles-admin.css',
             'tab' => 'event',
             'event' => $event,
         ];
@@ -144,7 +144,7 @@ class Admin extends BaseController
 
         $data = [
             'title' => 'Registrant Event | Uidesummit 2022',
-            'css' => '',
+            'css' => 'styles-admin.css',
             'tab' => 'event',
             'event' => $event,
             'listRegistrant' => $listRegistrant,
