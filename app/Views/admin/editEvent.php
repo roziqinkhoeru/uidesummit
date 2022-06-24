@@ -6,16 +6,26 @@
 <div class="container-fluid">
 
     <!-- Page Heading -->
-    <h1 class="h3 mb-2 text-gray-800">Edit events</h1>
-    <p class="mb-4">Manage the list of events to be held</p>
+    <div class="d-flex justify-content-between align-items-center">
+        <div>
+            <h1 class="h3 mb-2 text-gray-800">Edit events</h1>
+            <p class="mb-4">Form to change the event data to be held.</p>
+        </div>
+        <div>
+            <a href="/event" class="btn d-flex align-items-center">
+                <i class="fa-solid fa-angle-left mr-2 d-block"></i>
+                <span class="d-block">Back</span>
+            </a>
+        </div>
+    </div>
 
     <!-- DataTales Example -->
     <div class="card shadow mb-4">
         <div class="card-header py-3">
-            <h6 class="m-0 font-weight-bold text-primary">Form edit event</h6>
+            <h5 class="m-0 font-weight-bold text-primary">Form edit event</h5>
         </div>
         <div class="card-body">
-            <form action="/event/saveEditEvent/<?= $event['id_event']; ?>" method="post">
+            <form action="/event/saveEditEvent/<?= $event['id_event']; ?>" method="post" enctype="multipart/form-data" id="formEditEvent">
                 <!-- name event -->
                 <div class="row mb-3">
                     <label for="inputEmail" class="col-sm-2 col-form-label">Name event</label>
@@ -38,19 +48,17 @@
                     </div>
                 </div>
                 <!-- image event -->
-                <div class="row mb-3">
-                    <label for="inpitImage" class="col-sm-2 col-form-label">Image event</label>
+                <div class="row mb-5">
+                    <label for="inputImage" class="col-sm-2 col-form-label">Image event</label>
                     <div class="col-sm-10">
-                        <div class="input-group">
-                            <input type="file" class="form-control" id="imageEvent" name="imageEvent">
-                            <label class="input-group-text" for="imageEvent">Upload</label>
-                        </div>
+                        <input type="file" class="form-control" id="imageEvent" name="imageEvent">
                     </div>
                 </div>
-
-                <button type="submit" class="btn btn-primary">Save</button>
+                <div class="d-flex justify-content-end">
+                    <a href="/event" class="btn btn-secondary">Cancel</a>
+                    <button type="submit" class="btn btn-primary ml-3" id="buttonEditEvent">Save</button>
+                </div>
             </form>
-
         </div>
     </div>
 </div>
