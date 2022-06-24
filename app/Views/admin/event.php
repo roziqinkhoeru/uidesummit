@@ -41,9 +41,11 @@
                                 <td><?= $event['information_event']; ?>
                                 </td>
                                 <td>
-                                    <a href="/event/editEvent/<?= $event['id_event']; ?>"><i class="fa-solid fa-pen-to-square"></i></a>
-                                    <a href="/event/deleteEvent/<?= $event['id_event']; ?>"><i class="fa-solid fa-trash"></i></a>
-                                    <a href="/event/viewRegistrantEvent/<?= $event['id_event']; ?>"><i class="fa-solid fa-eye"></i></a>
+                                    <div class="d-flex align-items-center justify-content-between px-2 w-100">
+                                        <a href="/event/editEvent/<?= $event['id_event']; ?>"><i class="fa-solid fa-pen-to-square text-primary"></i></a>
+                                        <a href="/event/viewRegistrantEvent/<?= $event['id_event']; ?>"><i class="fa-solid fa-eye text-success"></i></a>
+                                        <a href="/event/deleteEvent/<?= $event['id_event']; ?>"><i class="fa-solid fa-trash text-danger"></i></a>
+                                    </div>
                                 </td>
                             </tr>
                         <?php endforeach; ?>
