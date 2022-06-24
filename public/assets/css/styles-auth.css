@@ -1,0 +1,34 @@
+.main_login {
+  width: 100%;
+  min-height: 100vh;
+}
+
+.main_login_content {
+  min-height: 100vh;
+  width: 100%;
+}
+
+.brand_login {
+  text-align: center;
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.card_login {
+  width: 27rem;
+  margin: 0 auto;
+  border-radius: 1rem;
+}
+
+.fw_bold {
+  font-weight: 700 !important;
+}
+
+@media screen and (max-width: 576px) {
+  .brand_login {
+    font-size: 1.75rem;
+  }
+  .card_login {
+    width: 94%;
+  }
+}

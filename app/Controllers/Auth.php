@@ -19,6 +19,7 @@ class Auth extends BaseController
     {
         $data = [
             'title' => 'Login Uidesummit 2022',
+            'css' => 'styles-auth.css',
         ];
         return view('auth/login', $data);
     }
