@@ -22,7 +22,7 @@
     <!-- DataTales Example -->
     <div class="card shadow mb-4">
         <div class="card-header py-3">
-            <h5 class="m-0 font-weight-bold text-primary"><?= 'Event1'; ?> event registrar</h5>
+            <h5 class="m-0 font-weight-bold text-primary"><?= $event['name_event']; ?> Participant</h5>
         </div>
         <div class="card-body">
             <div class="table-responsive">
