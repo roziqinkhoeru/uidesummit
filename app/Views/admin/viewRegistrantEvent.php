@@ -29,18 +29,18 @@
                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                     <thead>
                         <tr>
-                            <th class="text-center">No</th>
-                            <th>Fullname</th>
-                            <th>Email</th>
-                            <th>Date Birth</th>
-                            <th>Address</th>
+                            <th class="text-center table_registrant_number">No</th>
+                            <th class="table_registrant_name">Fullname</th>
+                            <th class="table_registrant_email">Email</th>
+                            <th class="table_registrant_date">Date Birth</th>
+                            <th class="table_registrant_address">Address</th>
                         </tr>
                     </thead>
                     <tbody>
                         <?php $i = 1; ?>
                         <?php foreach ($listRegistrant as $registrant) : ?>
                             <tr>
-                                <td><?= $i++; ?>
+                                <td class="text-center"><?= $i++; ?>
                                 </td>
                                 <td><?= $registrant['name_registrant']; ?>
                                 </td>

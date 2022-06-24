@@ -10,12 +10,20 @@
   display: none;
 }
 
-.table_event_number {
+.table_event_number,
+.table_registrant_number {
   width: 5%;
   vertical-align: middle;
 }
-.table_event_name {
+.table_event_name,
+.table_registrant_date {
   width: 20%;
+  vertical-align: middle;
+}
+.table_registrant_name,
+.table_registrant_email,
+.table_registrant_address {
+  width: 25%;
   vertical-align: middle;
 }
 .table_event_date {
