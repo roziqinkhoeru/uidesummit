@@ -7,13 +7,14 @@
 
     <!-- Page Heading -->
     <h1 class="h3 mb-2 text-gray-800">Add events</h1>
-    <p class="mb-4">Manage the list of events to be held</p>
+    <p class="mb-4">A form to add new event data to be held.</p>
 
     <!-- DataTales Example -->
     <div class="card shadow mb-4">
         <div class="card-header py-3">
-            <h6 class="m-0 font-weight-bold text-primary">Form add event</h6>
+            <h5 class="m-0 font-weight-bold text-primary">Form add event</h5>
         </div>
+
         <div class="card-body">
             <form action="/event/saveEvent" method="post" enctype="multipart/form-data">
                 <!-- name event -->
@@ -38,7 +39,7 @@
                     </div>
                 </div>
                 <!-- image event -->
-                <div class="row mb-3">
+                <div class="row mb-5">
                     <label for="inpitImage" class="col-sm-2 col-form-label">Image event</label>
                     <div class="col-sm-10">
                         <div class="input-group">
@@ -47,7 +48,9 @@
                         </div>
                     </div>
                 </div>
-                <button type="submit" class="btn btn-primary">Add event</button>
+                <div class="d-flex justify-content-end">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
             </form>
         </div>
     </div>
