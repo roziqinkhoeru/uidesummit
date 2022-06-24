@@ -54,6 +54,12 @@
                     <i class="fas fa-fw fa-chart-area"></i>
                     <span>Event</span></a>
             </li>
+            <!-- Nav Item - feedback -->
+            <li class="nav-item nav_item <?= ($tab == 'feedback') ? 'active' : ''; ?>">
+                <a class="nav-link" href="/feedback">
+                    <i class="fas fa-fw fa-table"></i>
+                    <span>Feedback</span></a>
+            </li>
 
             <!-- Divider -->
             <hr class="sidebar-divider d-none d-md-block" />

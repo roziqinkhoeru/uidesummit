@@ -4,17 +4,20 @@ namespace App\Controllers;
 
 use App\Models\ModelEvent;
 use App\Models\ModelRegistrant;
+use App\Models\ModelFeedback;
 
 class Admin extends BaseController
 {
     protected $modelEvent;
     protected $modelRegistrant;
     protected $modelAuth;
+    protected $modelFeedback;
 
     public function __construct()
     {
         $this->modelEvent = new ModelEvent();
         $this->modelRegistrant = new ModelRegistrant();
+        $this->modelFeedback = new ModelFeedback();
     }
 
     // index
@@ -152,5 +155,20 @@ class Admin extends BaseController
         ];
 
         return view('admin/viewRegistrantEvent', $data);
+    }
+
+    // view feedback
+    public function viewFeedback()
+    {
+        $listFeedback = $this->modelFeedback->orderBy('id', 'DESC')->findAll();
+
+        $data = [
+            'title' => 'Feedback | Uidesummit 2022',
+            'css' => 'styles-admin.css',
+            'tab' => 'feedback',
+            'listFeedback' => $listFeedback,
+        ];
+
+        return view('admin/viewFeedback', $data);
     }
 }

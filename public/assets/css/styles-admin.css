@@ -11,12 +11,27 @@
 }
 
 .table_event_number,
-.table_registrant_number {
+.table_registrant_number,
+.table_feedback_number {
   width: 5%;
   vertical-align: middle;
 }
+.table_event_action {
+  width: 12%;
+  vertical-align: middle;
+}
+.table_event_date {
+  width: 13%;
+  vertical-align: middle;
+}
+.table_feedback_phone {
+  width: 15%;
+  vertical-align: middle;
+}
 .table_event_name,
-.table_registrant_date {
+.table_registrant_date,
+.table_feedback_name,
+.table_feedback_email {
   width: 20%;
   vertical-align: middle;
 }
@@ -26,16 +41,12 @@
   width: 25%;
   vertical-align: middle;
 }
-.table_event_date {
-  width: 13%;
+.table_feedback_message {
+  width: 40%;
   vertical-align: middle;
 }
 .table_event_information {
   width: 50%;
-  vertical-align: middle;
-}
-.table_event_action {
-  width: 12%;
   vertical-align: middle;
 }
 

@@ -43,6 +43,7 @@ $routes->group('', ['filter' => 'VerifyAuth'], function ($routes) {
     $routes->add('/dashboard', 'Admin::index');
     $routes->add('/event', 'Admin::event');
     $routes->add('/event/(:any)', 'Admin::$1');
+    $routes->add('/feedback', 'Admin::viewFeedback');
 });
 
 $routes->get('/', 'Event::index');
