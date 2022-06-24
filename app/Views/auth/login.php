@@ -19,6 +19,8 @@
     <!-- Custom fonts for this template-->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+    <!-- Bootstrap icons-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
 
     <!-- Custom styles for this template-->
     <link href="<?= base_url('assets/css/sb-admin-2.min.css'); ?>" rel="stylesheet">
@@ -41,7 +43,7 @@
                                             <h1 class="h4 text-gray-900 mb-2 fw_bold">Welcome Back!</h1>
                                             <p>Login to Uidesummit Admin</p>
                                         </div>
-                                        <form action="<?= base_url('auth/checkAuth'); ?>" method="post">
+                                        <form action="<?= base_url('auth/checkAuth'); ?>" method="post" id="formLogin">
                                             <!-- email input -->
                                             <div class="mb-3">
                                                 <label for="email" class="form-label fw_bold">Email</label>
@@ -54,7 +56,7 @@
                                             </div>
                                             <!-- submit -->
                                             <div class="mb-3">
-                                                <button type="submit" class="btn btn-primary w-100 text-center">Login</button>
+                                                <button type="submit" class="btn btn-primary w-100 text-center" id="submitLogin">Login</button>
                                             </div>
                                         </form>
                                     </div>
@@ -78,6 +80,44 @@
     </script>
     <!-- Custom scripts for all pages-->
     <script src="<?= base_url(); ?>/assets/js/sb-admin-2.min.js"></script>
+    <!-- jquery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- jquery validate -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js" integrity="sha512-37T7leoNS06R80c8Ulq7cdCDU5MNQBwlYoy1TX/WUsLFC2eYNqtKlV0QjH7r8JpG/S0GUMZwebnVFLPd6SU5yg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/additional-methods.js"></script>
+
+    <script>
+        // validatePassword with JQuery
+        // LOGIN FORM
+        const exclamationCircle = "<i class='bi bi-exclamation-circle'></i>";
+
+        $(document).ready(function() {
+            $("#formLogin").validate({
+                rules: {
+                    email: {
+                        required: true,
+                        email: true
+                    },
+                    password: {
+                        required: true,
+                    },
+                },
+                messages: {
+                    email: {
+                        required: exclamationCircle + " Email is required",
+                        email: exclamationCircle + " Email is not valid"
+                    },
+                    password: {
+                        required: exclamationCircle + " Password is required",
+                    },
+                },
+            });
+
+            $("#submitLogin").on("click", () => {
+                console.log($("#formLogin").valid());
+            });
+        });
+    </script>
 </body>
 
 </html>
