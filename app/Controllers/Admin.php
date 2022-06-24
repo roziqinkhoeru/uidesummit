@@ -9,6 +9,7 @@ class Admin extends BaseController
 {
     protected $modelEvent;
     protected $modelRegistrant;
+    protected $modelAuth;
 
     public function __construct()
     {
@@ -19,7 +20,7 @@ class Admin extends BaseController
     // index
     public function index()
     {
-
+        // get name admin
         $data = [
             'title' => 'Dashboard Admin | Uidesummit 2022',
             'css' => 'styles-admin.css',
