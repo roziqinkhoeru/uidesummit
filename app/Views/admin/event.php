@@ -32,7 +32,7 @@
                         <?php $i = 1; ?>
                         <?php foreach ($listEvent as $event) : ?>
                             <tr>
-                                <td><?= $i++; ?>
+                                <td class="text-center"><?= $i++; ?>
                                 </td>
                                 <td><?= $event['name_event']; ?>
                                 </td>
