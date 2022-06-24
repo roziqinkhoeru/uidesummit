@@ -64,4 +64,57 @@
 </div>
 
 
+<?= $this->endSection(); ?>
+
+<?= $this->section('scriptAdmin'); ?>
+
+<!-- jquery -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<!-- jquery validate -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js" integrity="sha512-37T7leoNS06R80c8Ulq7cdCDU5MNQBwlYoy1TX/WUsLFC2eYNqtKlV0QjH7r8JpG/S0GUMZwebnVFLPd6SU5yg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/additional-methods.js"></script>
+
+<script>
+    // validatePassword with JQuery
+    // feedback form
+    const exclamationCircle = "<i class='fa-solid fa-circle-exclamation'></i>";
+
+    $(document).ready(function() {
+        $("#formEditEvent").validate({
+            rules: {
+                nameEvent: {
+                    required: true,
+                },
+                dateEvent: {
+                    required: true,
+                },
+                informationEvent: {
+                    required: true,
+                },
+                imageEvent: {
+                    required: true,
+                },
+            },
+            messages: {
+                nameEvent: {
+                    required: exclamationCircle + " Name event is required",
+                },
+                dateEvent: {
+                    required: exclamationCircle + " Date event is required",
+                },
+                informationEvent: {
+                    required: exclamationCircle + " Information event is required",
+                },
+                imageEvent: {
+                    required: exclamationCircle + " Image event is required",
+                },
+            },
+        });
+
+        $("#buttonEditEvent").on("click", () => {
+            console.log($("#formEditEvent").valid());
+        });
+    });
+</script>
+
 <?= $this->endSection();
