@@ -9,3 +9,24 @@
 .sidebar.toggled .sidebar_message {
   display: none;
 }
+
+.table_event_number {
+  width: 5%;
+  vertical-align: middle;
+}
+.table_event_name {
+  width: 20%;
+  vertical-align: middle;
+}
+.table_event_date {
+  width: 13%;
+  vertical-align: middle;
+}
+.table_event_information {
+  width: 50%;
+  vertical-align: middle;
+}
+.table_event_action {
+  width: 12%;
+  vertical-align: middle;
+}

@@ -15,16 +15,17 @@
             <h5 class="m-0 font-weight-bold text-primary">Event</h5>
             <a href="/event/addEvent" class="btn btn-primary d-flex align-items-center"><i class="fa-solid fa-plus mr-2 d-block"></i><span class="d-block">Add event</span></a>
         </div>
+
         <div class="card-body">
             <div class="table-responsive">
                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                     <thead>
                         <tr>
-                            <th class="text-center">No</th>
-                            <th>Name</th>
-                            <th>Date</th>
-                            <th>Information</th>
-                            <th class="text-center">Action</th>
+                            <th class="text-center table_event_number">No</th>
+                            <th class="table_event_name">Name</th>
+                            <th class="table_event_date">Date</th>
+                            <th class="table_event_information">Information</th>
+                            <th class="text-center table_event_action">Action</th>
                         </tr>
                     </thead>
                     <tbody>
