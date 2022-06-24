@@ -19,10 +19,11 @@ class Admin extends BaseController
     // index
     public function index()
     {
+
         $data = [
             'title' => 'Dashboard Admin | Uidesummit 2022',
             'css' => '',
-            'tab' => 'dashboard'
+            'tab' => 'dashboard',
         ];
 
         return view('admin/index', $data);
